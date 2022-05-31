@@ -1,0 +1,108 @@
+body{
+    min-width:320px;
+    width:100vw;
+    height:100vh;
+    background-color:var(--bg-color);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    gap:0;
+    padding:0;
+    padding-top:4rem;
+}
+
+header{
+    position:fixed;
+    top:0;
+    height:var(--header-height);
+    background-color:blue;
+}
+footer{
+    margin-top:6rem;
+}
+
+nav{
+    height:6rem;
+}
+
+.menu-btn{
+    background-color:var(--main-color);
+    border-radius:none;
+    color:white;
+    font-family: 'flood-std-regular', Arial, Helvetica, sans-serif;
+    font-size:1.5rem;
+    width:100%;
+}
+
+.main-title{
+    width:100vw;
+    background-color:var(--main-color);
+    color:white;
+    font-family:'stencil', Arial, Helvetica, sans-serif;
+    font-size:2.5rem;
+    padding:0.5rem;
+}
+
+.title{
+    border-radius:1rem;
+    color:var(--title-color);
+    font-family: 'flood-std-regular', Arial, Helvetica, sans-serif;
+    font-size:2rem;
+    margin:0.5rem;
+}
+
+.bg-image{
+    max-width:98vw;
+    height:auto;
+    margin-top:auto;
+}
+
+.bottom{
+    position:fixed;
+    width:100vw;
+    bottom:0;
+}
+
+#department{
+    position:absolute;
+    /*font-weight:bold;*/
+    color:white;
+    font-size:1.5rem;
+}
+
+.card-icon{
+    height:4rem;
+    width:auto;
+}
+.menu-icon{
+    height:3rem;
+    width:auto;
+}
+
+.anchor{
+    position:relative; 
+    top:var(--anchor-offset);
+}
+
+.card-header{
+    height:5rem;
+}
+.card-image{
+    width:100%;
+}
+
+/* effet visuel surchargé grâce à "!important" pour scrollspy */
+.nav-link.active{
+    background-color:#AB00FF !important;
+}
+
+.article-title{
+    color:white;
+    font-family:stencil;
+}
+
+dt{
+    color:yellow;
+}
+

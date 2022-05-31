@@ -1,0 +1,9 @@
+header, footer{
+    z-index:10;
+    width:100vw;
+}
+
+nav{
+    z-index:2;
+}
+

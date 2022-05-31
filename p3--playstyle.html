@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Identifier son style de jeu et s'équiper">
+    <meta name="keywords" content="pétanque">
+
+    <!-- Bootstrap stylesheet from Content Delivery Network -->
+    <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous">
+
+    <!-- Website stylesheet -->
+    <link rel="stylesheet" href="./index.css">
+
+    <!-- favorite icon -->
+    <link rel="icon" type="image/png" href="/index-ico-favicon.png">
+
+    <title>Style de jeu et équipement</title>
+</head>
+
+<body class="container-fluid" data-bs-spy="scroll" data-bs-target="#menu-icon-group" data-bs-offset="50">
+
+    <audio autoplay loop>
+        <source src="/p3-aud-main.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>  
+ 
+    <header>
+        <h1 class="main-title h-100 ps-3">PETANQUE <img src="/index-ico-bowl.png" class="h-100"></h1> 
+    </header>  
+
+    <main class="w-100">
+    <article class="row p-1 w-100 mx-auto">
+        <h2 class="article-title">Mon style de jeu</h2>
+        <div class="anchor d-lg-none" id="pointeuse"></div>
+
+
+        <section class="card col-12 col-lg-4 bg-dark align-items-start m-0 mb-3 p-0 text-light">    
+            <div class="card-header">
+                <h2 class="title display-3 m-auto"><img class="card-icon" src="/p3-ico-accurate.png"> Pointeuse</h2>          
+            </div>
+            <div class="card-body">
+                <div class="p-2 row w-100">
+                    <h3 class="col col-lg-12 text-nowrap"><strong>Marquer des points</strong></h3>
+                    <h3 class="col text-nowrap"><strong>S'adapter au terrain</strong></h3>
+                </div> 
+                <div class="row align-items-center position-relative"> 
+
+                    <div class="col position-relative top-0 mb-3">
+                        <div class="collapse position-absolute top-0 bg-dark video">
+                            <video width="98%" height="auto" autoplay loop muted>
+                                <source src="/p3-mov-accurate.mp4" type="video/mp4">    
+                            Your browser does not support the video tag.
+                            </video>         
+                        </div> 
+                        <img class="w-100" src="/p3-img-accurate.png">
+                    </div> 
+
+                    <div class="col-12 col-md-4 col-lg-12 position-relative">
+                        <div class="row ">
+                            <div class="col text-nowrap">
+                                <h4>Qualités</h4>
+                                <ul>
+                                    <li>Endurance</li>
+                                    <li>Finesse</li>
+                                    <li>Capacité d'observation</li>
+                                </ul>
+                            </div>
+                            <div class="col text-nowrap">
+                                <h4>Techniques</h4>
+                                <ul>
+                                    <li>Roulette</li>
+                                    <li>Demi-portée</li>
+                                    <li>Portée</li>
+                                </ul>
+                            </div>
+                        </div>     
+                    </div>
+
+                    <div style="position:absolute; bottom:0; z-index:1;">
+                        <div class="collapse " id="explanation-accurate">
+                            <div class="bg-dark p-3 border border-light rounded" style="width: 100%;">
+                                <dl>                                    
+                                    <dt>Roulette :</dt>
+                                    <dd>faire rouler la boule jusqu’à l’objectif. 
+                                        Pratiquée accroupi, elle permet d’être plus précis dans le lancé
+                                    </dd>
+                                    <dt>Demi-portée :</dt>
+                                    <dd>utilisée lorsqu’il y a un ou des obstacle(s) entre le joueur et le but. 
+                                        Le pointeur lance sa boule en hauteur de façon à ce qu’elle retombe au sol entre lui 
+                                        et le but pour finir sa course en roulant doucement.
+                                    </dd>
+                                    <dt>Portée ou plombée :</dt>
+                                    <dd>la boule est lancée très haut de manière à retomber 
+                                        le plus près possible du but
+                                        Debout, le pointeur bénéficie d’une plus grande stabilité
+                                        pour donner l’effet escompté.
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>           
+            </div>
+
+
+            <div class="d-flex justify-content-between justify-content-lg-start align-items-center w-100">
+                <a href=".video" data-bs-toggle="collapse"><img src="/p3-ico-camera.svg" class="m-3" height="32px"></a>      
+                <a href="#explanation-accurate" data-bs-toggle="collapse"><img src="/p3-ico-question.svg" class="m-3" height="32px"></a>                  
+            </div>  
+
+        </section>
+
+        <div class="anchor d-lg-none" id="milieu"></div>
+        <section class="card col-12 col-lg-4 bg-dark align-items-start m-0 mb-3 p-0 text-light">    
+            <div class="card-header ">
+                <h2 class="title display-3 m-auto"><img class="card-icon" src="/p3-ico-middle.png"> Milieu</h2>          
+            </div>
+            <div class="card-body">
+                <div class="p-2 row w-100">
+                    <h3 class="col col-lg-12 text-nowrap"><strong>Définir la stratégie</strong></h3>
+                    <h3 class="col text-nowrap"><strong>Veiller à la cohésion</strong></h3>
+                </div> 
+                <div class="row align-items-center position-relative"> 
+                    <div class="col position-relative top-0 mb-3">
+                        <div class="collapse position-absolute top-0 bg-dark video">
+                            <video width="98%" height="auto" autoplay loop muted>
+                                <source src="/p3-mov-middle.mp4" type="video/mp4">    
+                            Your browser does not support the video tag.
+                            </video>         
+                        </div> 
+                        <img class="w-100" src="/p3-img-middle.png">
+                    </div> 
+                        <div class="col-12 col-md-4 col-lg-12">
+                            <div class="row">
+                                <div class="col text-nowrap">
+                                    <h4>Qualités</h4>
+                                    <ul>
+                                        <li>Résistance à la pression</li>
+                                        <li>Polyvalence</li>
+                                        <li>Capacité d'analyse</li>
+                                    </ul>
+                                </div>
+                                <div class="col text-nowrap">
+                                    <h4>Techniques</h4>
+                                    <ul>
+                                        <li>joueuse complète</li>
+                                        <li>cf pointeuse</li>
+                                        <li>cf tireuse</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                </div>       
+            </div>
+            <a href=".video" class="d-flex justify-content-start align-items-center mt-2 w-100" data-bs-toggle="collapse"><img src="/p3-ico-camera.svg" class="mb-3 ms-3" height="32px"></a>        
+        </section>
+
+        <div class="anchor d-lg-none" id="tireuse"></div>
+        <section class="card col-12 col-lg-4 bg-dark align-items-start m-0 mb-3 p-0 text-light">    
+            <div class="card-header ">
+                <h2 class="title display-3 m-auto"><img class="card-icon" src="/p3-ico-shooter.png"> Tireuse</h2>          
+            </div>
+            <div class="card-body">
+                <div class="p-2 row w-100">
+                    <h3 class="col col-lg-12 text-nowrap"><strong>Faire des carreaux</strong></h3>
+                    <h3 class="col text-nowrap"><strong>Dégager le terrain</strong></h3>
+                </div> 
+                <div class="row align-items-center position-relative"> 
+                    <div class="col position-relative top-0 mb-3">
+                        <div class="collapse position-absolute top-0 bg-dark video">
+                            <video width="98%" height="auto" autoplay loop muted>
+                                <source src="/p3-mov-shooter.mp4" type="video/mp4">    
+                            Your browser does not support the video tag.
+                            </video>         
+                        </div> 
+                        <img class="w-100" src="/p3-img-shooter.png">
+                    </div> 
+
+                    <div class="col-12 col-md-4 col-lg-12">
+                        <div class="row">
+                            <div class="col text-nowrap">
+                                <h4>Qualités</h4>
+                                <ul>
+                                    <li>Souplesse</li>
+                                    <li>Puissance</li>
+                                    <li>Capacité de concentration</li>
+                                </ul>
+                            </div>
+                            <div class="col text-nowrap">
+                                <h4>Techniques</h4>
+                                <ul>
+                                    <li>Tir "au fer"</li>
+                                    <li>Tir "à la rafle"</li>
+                                    <li>faire un "carreau"</li>
+                                    <li>faire un "palet"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="position:absolute; bottom:0; z-index:1;">
+                        <div class="collapse " id="explanation-shooter">
+                            <div class="bg-dark p-3 border border-light rounded" style="width: 100%;">
+                                <dl>                                    
+                                    <dt>Tir « au fer » :</dt>
+                                    <dd>Faire retomber sa boule directement sur la boule adverse</dd>
+                                    <dt>Tir « à la rafle » :</dt>
+                                    <dd>La boule est tirée au ras du sol. Elle vient se placer devant la boule de l’adversaire</dd>
+                                    <dt>Faire « un carreau » :</dt>
+                                    <dd>La boule du tireur prend directement la place de la boule visée.</dd>
+                                    <dt>Faire « un palet » :</dt>
+                                    <dd>Le tireur lance sa boule juste devant la boule cible. 
+                                        Il la dégomme tout en plaçant sa boule dans un rayon d’un mètre environ.
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between justify-content-lg-start align-items-center w-100">
+                <a href=".video" data-bs-toggle="collapse"><img src="/p3-ico-camera.svg" class="m-3" height="32px"></a>          
+                <a href="#explanation-shooter" data-bs-toggle="collapse"><img src="/p3-ico-question.svg" class="m-3" height="32px"></a>                  
+            </div>  
+
+        </section>
+
+    </article>
+    <article class="row w-100 mx-auto p-0 position-relative align-items-center">
+        <h2 class="article-title">Mon équipement</h2> 
+        
+        <div class="col text-light p-0">
+            <div class="row justify-content-around p-0">
+
+                <div class="col-12 col-md-6 col-xxl-3 mt-3 d-flex flex-column"> 
+                    <img src="/p3-img-triplette.png" class="border border-light rounded mw-100 mb-auto">
+                    <video class="border border-light rounded mw-100 d-none d-md-block d-lg-none d-xxl-block" autoplay loop muted >
+                        <source src="/p3-mov-newborn.mp4 " type="video/mp4">    
+                        Your browser does not support the video tag.
+                    </video>   
+                    
+                </div>
+                <section class="col-12 col-md-6 col-xxl-3 
+                d-flex flex-column 
+                align-items-start align-items-sm-center 
+                justify-content-start justify-content-sm-center justify-content-xxl-start 
+                text-nowrap mt-3">
+                    <h2 class="title">Caractéristiques :</h2>  
+                    <h3>Confort de jeu, sensations</h3>
+                        <ul>
+                            <li>Matériaux (touché, entretien)</li>
+                            <li>Densité (masse/volume)</li>
+                                <ul>
+                                    <li>Diamètre (tenue en main)</li>
+                                    <li>Poids (endurance joueur)</li>
+                                </ul>
+                        </ul>
+                    <h3>Comportement</h3>
+                        <ul>
+                            <li>Poids (gravité) </li>
+                            <li>Dureté (rebond)</li>
+                            <li>Finition (frottement)</li>
+                        </ul>      
+                </section>
+        
+                <section class="col-12 col-md-6 col-xxl-3 
+                d-flex flex-column 
+                align-items-start align-items-sm-center 
+                justify-content-start justify-content-sm-center justify-content-xxl-start 
+                text-nowrap mt-3">
+                <h2 class="title">Options</h2>                       
+            
+                    <h3>Optimiser le contrôle </h3>
+                    stries, poids important, faible diamètre
+                    <ul>
+                        <li>tenue en main</li>
+                        <li>arrêt plus facile</li>
+                        <li>handicape pour les tireurs adverses</li>
+                    </ul>  
+                    <h3>Trouver le bon compromis </h3>
+                    peu de stries, demi-tendres, diamètre moyen
+                    <ul>
+                        <li>poids faible - roule plus loin</li>
+                        <li>poids important - s'arrête plus tôt</li>
+                    </ul>
+                    <h3>Favoriser le tir </h3>
+                    lisse, tendre, gros diamètre
+                    <ul>
+                        <li>libération optimale lors du tir</li>
+                        <li>meilleur amorti - se fige à l'impact</li>
+                        <li>augmente la surface de contact</li>
+                    </ul>            
+                </section>
+                <div class="col-12 col-md-6 col-xxl-3 d-flex justify-content-center align-items-center mt-3">
+                    <img src="/p3-img-cindy.jpg" class="mh-100 mw-100 w-auto border border-light rounded">
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        
+    </article>
+
+
+
+    </main>
+
+    <footer>
+        <a class="row btn menu-btn m-0 p-0" href="/index.html">Prendre ma licence</a>
+        <img class="card-image" src="/p3-img-footer.png" >        
+    </footer>
+
+
+    <nav class="d-lg-none nav col position-fixed bottom-0 w-100" id="menu-icon-group">
+        <div id="icon-group" class="row w-100 align-items-center m-0 p-0 gap-1 d-lg-none bg-dark">
+            <a href="#pointeuse" class="nav-link active col p-1 border border-1 border-light d-flex justify-content-center"><img class="menu-icon" src="/p3-ico-accurate.png"></a>
+            <a href="#milieu" class="nav-link col p-1 border border-1 border-light d-flex justify-content-center"><img class="menu-icon" src="/p3-ico-middle.png"></a>
+            <a href="#tireuse" class="nav-link col p-1 border border-1 border-light d-flex justify-content-center"><img class="menu-icon" src="/p3-ico-shooter.png"></a>
+        </div>
+        <a class="row btn menu-btn m-0 p-0" href="/index.html">menu</a>
+    </nav>
+    
+    <!-- Bootstrap script bundle from Content Delivery Network -->
+    <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+    crossorigin="anonymous">
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+:root{
+    --bg-color:black;
+    --main-color:#FF00EE;
+    --title-color:#00FF80;
+    --menu-color:#AB00FF;
+    --header-height:4rem;
+    --anchor-offset:-4rem;
+    user-select: none;
+}
+
+@font-face {
+    font-family: "flood-std-regular";
+    src: url("/font-floodstd.otf");
+  }
+
+@font-face {
+    font-family: "stencil";
+    src: url("/font-stencil.TTF");
+}
