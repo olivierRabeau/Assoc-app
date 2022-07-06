@@ -1,0 +1,221 @@
+/*--------------------------------------- mobile first -------------------------------------------*/
+
+/* Portrait */
+nav{
+    position:fixed;
+    bottom:0;
+    padding:0;
+    width:100%;
+} 
+
+.nav-bottom button{    
+    position:fixed;
+    bottom:0;
+    padding:0;
+    background:black;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    border:none;
+    border-top:1px solid grey;
+}
+
+.offcanvas-bottom{
+    height:5.5rem;
+    width:100%;
+    caret-color: transparent;
+    border-top:1px solid grey;
+}
+
+.nav-listlink{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+
+}
+
+.nav-link{
+    caret-color: transparent;
+    border-right:1px solid grey;
+    display:flex;
+    flex-direction:column;
+    width:100%;
+}
+
+.nav-text{
+    font-size:0.8rem;
+}
+.nav-icon{
+    height: 2rem;
+}
+.nav-bottom button{
+    height:3rem;
+}
+
+.menu-icon{
+    display:none;
+}
+
+.nav-top{
+    display:none;
+}
+
+/* Landscape */
+
+@media only screen and (orientation:landscape) and (max-height:476px){
+    header{
+        height:auto;
+    }
+    .main-title{
+        font-size:2rem;
+        padding:0.2rem;
+    }
+
+    .header-icon{
+        display:none;
+    }
+
+    .menu-icon{
+        display:block;
+        position:fixed;
+        top:0;
+        right:1.5rem;
+    }
+
+    .nav-bottom button{
+        display:none;
+    }
+
+    .nav-top{
+        display:none;
+    }
+
+    .offcanvas{
+        background-color:transparent;
+        border:none;
+        margin-left:calc(100vw - 6rem);
+        width:6rem;
+        height:calc(100vh - 2.5rem);
+    }
+
+    .offcanvas-bottom{
+        height:100%;
+        background-color:none;
+        margin-left:calc(100vw - 6rem);
+        width:6rem;
+        height:calc(100vh - 2.5rem);
+        border:none;
+    }
+
+    .nav-listlink{
+    flex-direction:column;
+    height:100%;
+    justify-content: center;
+    }
+
+    .nav-link{
+    height:100%;
+    border:1px solid grey;
+    }
+
+    .page-stamp{
+        top:2rem;
+    }
+}
+
+/*------------------------------------------ tablet ----------------------------------------------*/
+
+@media only screen and (min-height:476px) and (orientation:landscape), (min-width:576px) and (orientation:portrait){
+    .nav-bottom button{
+        top:4rem;
+        left:0;
+        height:calc(100vh - 4rem);
+        width:auto;
+        display:flex;
+        flex-direction:column;
+        background: transparent;
+    }
+    .offcanvas{
+        background-color:transparent;
+        border:none;
+        width:6rem;
+        height:calc(100vh - 4rem);
+     }
+     .offcanvas-bottom{
+        height:100%;
+        background-color:none;
+        width:6rem;
+        height:calc(100vh - 4rem);
+        border:none;
+     }
+
+.nav-listlink{
+    flex-direction:column;
+    height:100%;
+    justify-content: center;
+}
+.nav-link{
+    height:100%;
+    border:1px solid grey;
+}
+}
+
+/*------------------------------------------ laptop ----------------------------------------------*/
+
+@media only screen and (min-width:992px), (min-height:992px)  {
+
+    nav{
+        position:fixed;
+        top:4rem;
+        right:0;
+        padding:0;
+       height:6rem;
+       background-color: transparent;
+    } 
+    .nav-top{
+        position:fixed;
+        top:0;
+        right:0;
+        display:flex;   
+        background-color: transparent;
+    }
+    
+    .nav-listlink{
+        flex-direction:row;
+        justify-content:end;
+        background-color: transparent;
+    }
+
+    .nav-link{
+        border:none;
+        width:auto; 
+        flex-direction: row; 
+        height:3.5rem;
+    }
+
+    .menu-icon{
+        display:none;
+    }
+
+    .nav-bottom{
+        display:none;
+    }
+
+    .main-title{
+    font-size:2.5rem;
+    padding:0.5rem;
+    }
+
+    .page-stamp{
+        top:3.2rem;
+    }
+}
+
+/*------------------------------------------ desktop ----------------------------------------------*/
+
+@media only screen and (min-width:1400px){
+    .border-lg-start{
+        border-left:1px solid #212529;
+    }
+}

@@ -1,19 +1,37 @@
 :root{
     --bg-color:black;
-    --main-color:#FF00EE;
+    --main-color:orange; /*#FF00EE;*/
     --title-color:#00FF80;
     --menu-color:#AB00FF;
+    --deco-color:#2000FF;
     --header-height:4rem;
     --anchor-offset:-4rem;
     user-select: none;
 }
 
 @font-face {
-    font-family: "flood-std-regular";
+    font-family: "flood";
     src: url("/font-floodstd.otf");
   }
 
 @font-face {
     font-family: "stencil";
     src: url("/font-stencil.TTF");
+}
+
+@font-face {
+    font-family: "nautigal";
+    src: url("/font-TheNautigal-Regular.ttf");
+}
+
+.ff-flood{
+    font-family:"flood";
+}
+
+.ff-stencil{
+    font-family:"stencil";
+}
+
+.ff-nautigal{
+    font-family:"nautigal";
 }

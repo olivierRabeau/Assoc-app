@@ -22,9 +22,49 @@
     <title>Compétition</title>
 </head>
 
-<body>
+<body class="container">
+    <header data-bs-toggle="offcanvas" data-bs-target="#offcanvas-bottom">
+        <h1 class="main-title h-100 ps-3">PETANQUE <img src="/index-ico-bowl.png" class="header-icon"></h1>
+        <div class="page-stamp position-absolute bg-black ff-flood rounded-pill">événement</div> 
+        <img class="menu-icon " src="/nav-ico-list.svg"  height="40px" width="40px">
+    </header>  
+
+        <nav class="nav-bottom w-100">
+          <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-bottom"><img src="/nav-ico-list.svg"  height="40px" width="40px"></button>
+          <div class="offcanvas offcanvas-bottom border-dark" tabindex="-1" id="offcanvas-bottom">
+              <div class="nav-listlink" >
+                  <a href="/p1--association.html" class="nav-link border-dark me-auto">
+                      <img src="/nav-ico-association.svg" class="nav-icon">
+                      <h4 class="nav-text">association</h4>
+                  </a>    
+                  <a href="/p3--playstyle.html" class="nav-link border-dark">
+                      <img src="/nav-ico-triplette.svg" class="nav-icon">
+                      <h4 class="nav-text">équipement</h4>
+                  </a>
+              </div>
+          </div>
+        </nav>
+      
+        <nav class="nav-top" style="z-index:4;">
+          <div class="nav-listlink  d-flex flex-row" >
+              <a href="/p1--association.html" class="nav-link border-dark">
+                  <img src="/nav-ico-association.svg" class="nav-icon">
+                  <h4 class="nav-text">association</h4>
+              </a>
+              <a href="/p3--playstyle.html" class="nav-link border-dark">
+                  <img src="/nav-ico-triplette.svg" class="nav-icon">
+                  <h4 class="nav-text">équipement</h4>
+              </a>
+          </div>
+        </nav>
 
 
+    <div class="row w-100" style="height:3rem; background:black; color:white; font-family:stencil">
+    <div class="col">1985</div>
+    <div class="col">2010</div>
+    <div class="col">5468</div>
+    
+    </div>
 
     <!-- Bootstrap script bundle from Content Delivery Network -->
     <script 
