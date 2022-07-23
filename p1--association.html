@@ -45,29 +45,35 @@
     border:none;
   }
 
+  @keyframes panorama{
+  0%{left:0;
+  }
+  50%{
+    left:(-89vh + 50vw);
+  }
+  100%{
+    left:calc(-178vh + 100vw);    
+  }
+}
+
   /* mon image est au format 16/9 par conséquent en fixant la hauteur à 70vh je connais le décalage à appliquer
   c'est à dire (70/9)*16 = 124.4 vh . mon décalage est alors responsive.
   L'ajout de 100% de la largeur du container empèche l'image de devoiler l'arrière plan.
   La valeur pour 50% est la valeur final divisée par 2 popur conserver la linéarité de l'animation.*/
   .ptour-img{
-    position:relative;
-    animation-name: panorama;
+    position:fixed;
+    bottom:0;
+    height:100vh;
+    z-index:20;
+    animation-name:"panorama";
     animation-duration: 20s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-timing-function:  linear;
     animation-fill-mode: forwards;
+
   }
-@keyframes panorama{
-  0%{left:0;
-  }
-  50%{
-    left:(-62vh + 50%);
-  }
-  100%{
-    left:calc(-124vh + 100%);    
-  }
-}
+
 
 
 </style>
@@ -276,51 +282,23 @@
   <div class="text-light h-100 ff-flood">Les variantes du jeu </div>          
 </div>
 
-<div id="questions" class="list-group position-fixed fixed-bottom w-100 bg-dark">
+<div id="questions" class="list-group position-fixed fixed-bottom w-100 d-sm-none">
   <a class="list-group-item list-group-item-action active" href="#origines">
-    <div class="w-100 d-flex flex-row justify-content-start align-items-center p-0 m-0" data-bs-toggle="modal" data-bs-target="#explanations">
+    <div class="w-100 d-flex flex-row justify-content-start align-items-center p-0 m-0 bg-dark" data-bs-toggle="modal" data-bs-target="#explanations">
       <img src="/p3-ico-question.svg" class="me-2" height="32px">                  
       <div class="text-light h-100 ff-flood">Les variantes du jeu</div>          
     </div>
   </a>
   <a class="list-group-item list-group-item-action" href="#pratique">
-    <div class="w-100 d-flex flex-row justify-content-start align-items-center p-0 m-0" data-bs-toggle="modal" data-bs-target="#explanations">
+    <div class="w-100 d-flex flex-row justify-content-start align-items-center p-0 m-0 bg-dark" data-bs-toggle="modal" data-bs-target="#explanations">
       <img src="/p3-ico-question.svg" class="me-2" height="32px">                  
       <div class="text-light h-100 ff-flood">Role des organismes</div>          
     </div>
   </a>
-  <a class="list-group-item list-group-item-action" href="#end">
-  </a>
+  <a class="list-group-item list-group-item-action d-none" href="#end"></a>
 </div>
 
-<!--
-<nav>
-  <button type="button"  class="nav-button" data-bs-toggle="collapse" data-bs-target="#jumpfptp">
-    <img src="/nav-ico-list.svg" class="me-3">
-  </button>
-  <section id="jumpfptp" class="collapse w-100 d-xxl-block">            
-      <div class="nav-header">
-          <div class="h-0 w-100 border border-dark"></div>
-          <div class="text-center d-inline-block m-2"><h2 class="title fs-6">Site</h2></div>
-          <div class="h-0 w-100 border border-dark"></div>
-      </div>   
-      <div class="nav-listlink flex-lg-column">
-          <a href="/p1--association.html" class="nav-link flex-md-row">
-              <img src="/nav-ico-association.svg" class="current-page-icon">
-              <h4 class="current-page-title">association</h4>
-          </a>
-          <a href="/p2--competition.html" class="nav-link flex-md-row">
-              <img src="/nav-ico-calendar.svg">
-              <h4>événement</h4>
-          </a>
-          <a href="/p3--playstyle.html" class="nav-link flex-md-row">
-              <img src="/nav-ico-triplette.svg">
-              <h4>équipement</h4>
-          </a>
-      </div>    
-  </section>
-</nav>
--->
+</div>
 
   <nav class="nav-bottom w-100">
     <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-bottom"><img src="/nav-ico-list.svg"  height="40px" width="40px"></button>
@@ -353,7 +331,7 @@
 
 
 <div class="position-relative p-0 m-0 w-100">
-  <h2 class="section-title w-100 text-start">La pratique sportive</h2>
+  <h2 class="section-title w-100 text-start mt-3">La pratique sportive</h2>
   <div class="anchor h-0 w-100" id="pratique" ></div>
 </div>
 <div class="d-sm-none carousel slide w-100" data-bs-ride="carousel">
@@ -505,16 +483,29 @@
     </div>
 </div>
 
+<p class="text-light d-none d-sm-block">Une association ou un club de sport a tout intérêt à s’affilier à une fédération sportive. 
+  Il s’agit en effet d’une démarche indispensable pour les associations et clubs qui souhaitent 
+  participer à des compétitions (championnat, tournoi…). D’ailleurs, en cas de victoire, 
+  c’est l’assurance d’une reconnaissance de son titre de champion. Mais, 
+  c’est également l’occasion de bénéficier d’un réseau plus élargi. 
+  De fait, les structures affiliées peuvent mettre en commun leurs connaissances, 
+  contacts et matériels pour obtenir de meilleurs résultats. Cette mutualisation 
+  permet en plus d’accélérer le partage de compétences, l’échange de bonnes pratiques 
+  et d’expérience ainsi que l’émergence de projets collectifs entre les différents clubs.</p>
+  
+  <p class="text-light d-none d-sm-block">Les fédérations sportives constituent en outre des alliés de taille pour leurs clubs affiliés. 
+  Au-delà de la délivrance de licences, elles soutiennent et accompagnent les dirigeants des clubs 
+  et associations dans l’accomplissement de leurs missions. Cela, en mettant à leur disposition un 
+  centre de documentation, un service juridique, des formations… Comme mentionné plus haut, 
+  elles endossent aussi le rôle de porte-parole auprès des pouvoirs publics 
+  (en particulier les décideurs politiques, ministères et parlementaires). 
+  Effectivement, elles plaident pour une meilleure prise en considération des besoins 
+  et intérêts des clubs. Notamment en ce qui concerne la signature des contrats et conventions.</p>
+
 <div class="w-100 d-flex flex-row justify-content-start align-items-center p-0 m-0" data-bs-toggle="modal" data-bs-target="#explanations">
     <img src="/p3-ico-question.svg" class="m-3" height="32px">                  
     <div class="text-light h-100 ff-flood">Rôles des organismes</div>          
 </div>
-
-<div class="position-relative">
-    <div class="anchor" id="end" ></div>   
-</div>
-<!-- Button trigger modal -->
-
 
 <!-- Modal -->
 <div class="modal" id="explanations" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -546,13 +537,13 @@
 </div>
 
 <div class="position-relative p-0 m-0 w-100">
-  <h2 class="section-title w-100 text-start">Promotion de la discipline</h2>
-  <div class="anchor h-0 w-100" id="pratique" ></div>
+  <h2 class="section-title w-100 text-start my-3">Promotion de la discipline</h2>
+  <div class="anchor h-0 w-100" id="end" ></div>
 </div>
 
-<article class="w-100">
+<article class="w-100 mt-0">
   
-<div class="card w-100 border border-light p-0 h-25" >
+<div class="card w-100 border border-light p-0 h-25 mt-0" >
   <div class="row no-gutters">
     <div class="col-md-4">
       <span class="position-absolute left-0 top-0 m-1 ff-stencil">2015</span>
@@ -563,23 +554,25 @@
         <h3 class="card-title title">Un sport scolaire</h3>
         <h4 class="fs-5 text-warning">convention entre la FFPJP et le ministère de l'éducation nationale et des sports</h4>
         <p class="card-text">La pétanque peut désormais être enseignée pendant les heures d'éducation physique et sportive.
-
           A partir de la sixième, des enseignants brevetés de la FFPJP peuvent apporter leur soutien technique dans les collèges et lycées.
-        
-          La France ne sera pas la première à enseigner la pétanque à l'école, puisqu'en Thaïlande où la pétanque est un sport national c'est déjà le cas.</p>
+        </p>
         <p class="card-text"><small class="text-muted">De gauche à droite : Thierry Braillard, secrétaire d'Etat aux sports, Alain Cantarutti Président FFPJP, Najav Vallaud-Belkacem ministre de l'Education nationale et Lucette Coste, référente USEP de la FFPJP.</small></p>
       </div>
     </div>
   </div>
 </div>
 
+<div class="h-100 w-100 collapse" id="full-screen">
+<img src="./p1-img-ptour-limoges.jpg" class="ptour-img">
+<button type="button" class="btn btn-primary w-100 position-fixed bottom-0 end-0" data-bs-toggle="collapse" data-bs-target="#full-screen" style="z-index:30">Réduire</button>
+</div>
 
-
-<div class="card w-100 border border-light p-0 h-25" >
+<div class="card w-100 border border-light p-0 h-25">
   <div class="row no-gutters">
-    <div class="col-md-4">
+    <div class="col-md-4 position-relative">
       <span class="position-absolute left-0 top-0 m-1 ff-stencil text-dark">2022</span>
-      <img src="./p1-img-ptour-limoges.jpg" >
+      <img src="./p1-img-ptour-limoges.jpg" class="">
+      <button data-bs-toggle="collapse" data-bs-target="#full-screen" class="bg-black position-absolute ms-3 rounded-3 d-sm-none" style="z-index:5; bottom:-16px; left:0; border:none;"><img src="./p1-ico-binoculars.svg" height="32px"></button>
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -595,59 +588,13 @@
 </div>
 </article>
 
+<div class="saut-page" style="height:20rem;"></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Une association ou un club de sport a tout intérêt à s’affilier à une fédération sportive. 
-Il s’agit en effet d’une démarche indispensable pour les associations et clubs qui souhaitent 
-participer à des compétitions (championnat, tournoi…). D’ailleurs, en cas de victoire, 
-c’est l’assurance d’une reconnaissance de son titre de champion. Mais, 
-c’est également l’occasion de bénéficier d’un réseau plus élargi. 
-De fait, les structures affiliées peuvent mettre en commun leurs connaissances, 
-contacts et matériels pour obtenir de meilleurs résultats. Cette mutualisation 
-permet en plus d’accélérer le partage de compétences, l’échange de bonnes pratiques 
-et d’expérience ainsi que l’émergence de projets collectifs entre les différents clubs.
-
-Les fédérations sportives constituent en outre des alliés de taille pour leurs clubs affiliés. 
-Au-delà de la délivrance de licences, elles soutiennent et accompagnent les dirigeants des clubs 
-et associations dans l’accomplissement de leurs missions. Cela, en mettant à leur disposition un 
-centre de documentation, un service juridique, des formations… Comme mentionné plus haut, 
-elles endossent aussi le rôle de porte-parole auprès des pouvoirs publics 
-(en particulier les décideurs politiques, ministères et parlementaires). 
-Effectivement, elles plaident pour une meilleure prise en considération des besoins 
-et intérêts des clubs. Notamment en ce qui concerne la signature des contrats et conventions.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<footer class="border border-light" style="position:absolute; bottom:0; width:100vw; border-radius:2rem;">
+  <a class="row btn menu-btn m-0 p-0" href="https://www.petanquefrancaise.com/" target="blank">le site PPF</a>
+  <img src="./p1-img-croft.png" class="w-100 d-sm-none">  
+  <a class="row btn menu-btn m-0 p-0" href="https://www.123petanque.com/Clubs" target="blank">Trouver un club</a>
+</footer>
 
     <!-- Bootstrap script bundle from Content Delivery Network -->
     <script 

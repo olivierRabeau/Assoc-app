@@ -20,9 +20,75 @@
     <link rel="icon" type="image/png" href="/index-ico-favicon.png">
 
     <title>Compétition</title>
+
+    <style>
+        .jumbotron div{
+            display:flex;
+            justify-content:center;
+            width:100%;
+        }
+        
+        @media only screen and (max-width:576px){
+            .jumbotron div:first-child{
+            justify-content:start;
+
+            }
+            .jumbotron div:last-child{
+            justify-content:end;
+            }
+        }
+
+.card-image{
+    margin:0;
+    padding:0;
+    width:100%;
+    background:black;
+}
+
+.card-header{
+
+    width:100%;
+    background:green;
+}
+
+.table{
+text-align: start;
+column-width: auto;
+}
+
+@keyframes stripe-move{
+0%{
+    left:-26rem;
+}
+50%{
+    left:-13rem;
+}
+100%{
+    left:0;
+}
+
+}
+.logo-stripe{
+animation-name:"stripe-move";
+animation-iteration-count: infinite;
+animation-direction: normal;
+animation-timing-function: linear;
+animation-duration: 5s;
+}
+
+@media only screen and (max-width:768px){
+    .ovrflw-scrll{
+        max-height:180px;
+    }
+
+}
+
+    </style>
 </head>
 
-<body class="container">
+<body class="container" style="padding-bottom:6rem;">
+
+
     <header data-bs-toggle="offcanvas" data-bs-target="#offcanvas-bottom">
         <h1 class="main-title h-100 ps-3">PETANQUE <img src="/index-ico-bowl.png" class="header-icon"></h1>
         <div class="page-stamp position-absolute bg-black ff-flood rounded-pill">événement</div> 
@@ -57,14 +123,706 @@
               </a>
           </div>
         </nav>
+    <h2 class="section-title text-start w-100">Les principales compétitions</h2>
+    <ul class="text-light">
+        <li>Championnat du monde</li>
+        <li>Mondial la Marseillaise</li>
+        <li>Masters de pétanque</li>
+    </ul>
 
 
-    <div class="row w-100" style="height:3rem; background:black; color:white; font-family:stencil">
-    <div class="col">1985</div>
-    <div class="col">2010</div>
-    <div class="col">5468</div>
+
+    <h2 class="section-title w-100 text-start">C'est également...</h2>
+
+    <h3 class="title text-start w-100 mb-0 mt-3">PPF tour</h3>
     
+    <p class="text-light"> 
+        <dt class="w-100 text-start" >Tir de précision :</dt>
+        <dd class="text-light d-inline">discipline incontournable des Championnats de Pétanque. L’épreuve est 
+        constituée de 5 ateliers qui consistent à sortir une boule ou un but cible d’un cercle de 
+        tir sans toucher les boules ou buts obstacles.</dd>
+
+    <div class="card w-100 border border-light bg-black m-3 ">
+
+        <div class="card-header row m-0 position-relative bg-dark w-100 gap-3">   
+            <h3 class="w-100 text-light text-center">Finale 2016</h3> 
+            <div class="col d-flex flex-column align-items-center position-relative">
+                <a href="" class="ff-nautigal fs-3 text-light text-nowrap me-1" style="top:0; left:0; margin:0.5rem;">Léa Escoda</a> 
+                <img src="./p2-img-lea-escoda.png" alt=""  style="margin:0; max-height:9rem;">
+                <p class="text-light text-center text-nowrap w-100 p-0 m-0 fs-6">17 ans, championne du Gard,<br>36 points lors des qualifications</p>
+            </div>           
+            <div class="col d-flex flex-column align-items-center position-relative">
+                <a 
+                href="#cp-portrait" 
+                data-bs-toggle="collapse" 
+                style="top:0; left:0; margin:0.5rem; z-index:1;"
+                class="ff-nautigal fs-3 text-light text-nowrap ms-1"
+                >Cindy Peyrot</a>
+                <img src="./p2-img-cindy-peyrot.png" alt="" style="max-height:9rem" >                
+                <p class="text-light text-center text-nowrap w-100 p-0 m-0 fs-6 ">22 ans, championne de France,<br>46 points lors des qualifications</p>
+
+                <!--fenêtre masquée qui est découverte par click sur signature-->
+                <div style="position:absolute; bottom:3.5rem; z-index:1;">
+                    <div class="collapse " id="cp-portrait">
+                        <div class="bg-dark p-3 border border-light rounded w-100">       
+                            <p class="fw-bold" style="color:var(--main-color);">Cindy Peyrot</p>
+                            <p class="text-primary fw-bold">Tireuse ou milieu</p>
+                            <p  class="text-light" >Date de naissance: 30 mars 1994</p>
+                            <table class="table table-dark fs-6 fw-normal" style="width:100%;">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Competition</th>
+                                        <th scope="col">or</th>
+                                        <th scope="col">arg.</th>
+                                        <th scope="col">bro.</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Coupe des confédérations</th>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Chp d'Europe</th>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Chp de France</th>
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="btn-outline-primary w-100 bg-dark rounded-3"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#cp-portrait" 
+                            >Close</button>
+                        </div>
+                    </div>
+                </div>   
+
+            </div>  
+            <div class="position-absolute d-flex align-items-center justify-content-center p-0 w-100 h-100 " style="top:0; left:0; font-family:flood; color:var(--deco-color); font-size:5rem;">VS</div> 
+        </div> 
+
+        <div class="card-image row d-none d-sm-flex">  
+            <img src="./p2-img-lea-scores.jpg" class="col-12 col-md-6 my-3 mx-0">          
+            <img src="./p2-img-cindy-scores.jpg" class="col-12 col-md-6 my-3 mx-0">          
+        </div>
+
+        <div class="card-body p-0" >
+            <div class="row w-100 bg-black m-0">
+                <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center d-none d-sm-flex">
+                    <h4 class="w-100 text-start text-primary fs-6 text-nowrap fw-bold">Boule cible seule</h4>
+                    <table class="table table-dark table-striped text-light">
+                        <thead>
+                            <tr>
+                                <th scope="col"><a href="#A1" data-bs-toggle="modal"><img src="/p3-ico-camera.svg" height="32px"></a> </th>
+                                <th scope="col">6m</th>
+                                <th scope="col">7m</th>
+                                <th scope="col">8m</th>
+                                <th scope="col">9m</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-center">
+                                <th scope="row" class="text-start">Léa</th>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td class="main-info text-warning">12</td>
+                            </tr>
+                            <tr class="text-center">
+                                <th scope="row" class="text-start">Cindy</th>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td class="main-info text-warning">7</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center d-none d-sm-flex">
+                    <h4 class="w-100 text-start text-primary fs-6 text-nowrap fw-bold">Boule cible derrière but obstacle</h4>
+                    <table class="table table-dark table-striped text-light">
+                        <thead>
+                            <tr>
+                                <th scope="col"><a href="#A2" data-bs-toggle="modal"><img src="/p3-ico-camera.svg" height="32px"></a> </th>
+                                <th scope="col">6m</th>
+                                <th scope="col">7m</th>
+                                <th scope="col">8m</th>
+                                <th scope="col">9m</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-center">
+                                <th scope="row" class="text-start">Léa</th>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td class="main-info text-warning">3</td>
+                            </tr>
+                            <tr class="text-center">
+                                <th scope="row" class="text-start">Cindy</th>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="main-info text-warning">3</td>
+                            </tr>
+                        </tbody>
+                    </table>  
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center d-none d-sm-flex">
+                    <h4 class="w-100 text-start text-primary fs-6 text-nowrap fw-bold">Boule cible entre 2 boules obstacles</h4>
+                    <table class="table table-dark table-striped text-light">
+                        <thead>
+                            <tr>
+                                <th scope="col"><a href="#A3" data-bs-toggle="modal"><img src="/p3-ico-camera.svg" height="32px"></a> </th>
+                                <th scope="col">6m</th>
+                                <th scope="col">7m</th>
+                                <th scope="col">8m</th>
+                                <th scope="col">9m</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-center">
+                                <th scope="row" class="text-start">Léa</th>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td class="main-info text-warning">6</td>
+                            </tr>
+                            <tr class="text-center">
+                                <th scope="row" class="text-start">Cindy</th>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td class="main-info text-warning">8</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center d-none d-sm-flex">
+                    <h4 class="w-100 text-start text-primary fs-6 text-nowrap fw-bold">Boule cible derrière boule obstacle</h4> 
+                    <table class="table table-dark table-striped text-light">
+                        <thead>
+                            <tr>
+                                <th scope="col"><a href="#A4" data-bs-toggle="modal"><img src="/p3-ico-camera.svg" height="32px"></a> </th>
+                                <th scope="col">6m</th>
+                                <th scope="col">7m</th>
+                                <th scope="col">8m</th>
+                                <th scope="col">9m</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-center">
+                                <th scope="row" class="text-start">Léa</th>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="main-info text-warning">1</td>
+                            </tr>
+                            <tr class="text-center">
+                                <th scope="row" class="text-start">Cindy</th>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>5</td>
+                                <td class="main-info text-warning">11</td>
+                            </tr>
+                        </tbody>
+                    </table>  
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center d-none d-sm-flex">
+                    <h4 class="w-100 text-start text-primary fs-6 text-nowrap fw-bold">But cible</h4>
+                    <table class="table table-dark table-striped text-light">
+                        <thead>
+                            <tr>
+                                <th scope="col"><a href="#A5" data-bs-toggle="modal"><img src="/p3-ico-camera.svg" height="32px"></a> </th>
+                                <th scope="col">6m</th>
+                                <th scope="col">7m</th>
+                                <th scope="col">8m</th>
+                                <th scope="col">9m</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-center">
+                                <th scope="row" class="text-start">Léa</th>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="main-info text-warning">0</td>
+                            </tr>
+                            <tr class="text-center">
+                                <th scope="row" class="text-start">Cindy</th>
+                                <td>5</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="main-info text-warning">5</td>
+                            </tr>
+                        </tbody>
+                    </table>  
+                </div> 
+                
+                <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center d-sm-none">
+                    <ul class="list-unstyled text-primary">
+                        <li class="d-flex align-items-center"><a href="#A1" data-bs-toggle="modal" class="m-3"><img src="/p3-ico-camera.svg" height="32px"></a> Boule cible seule  </li>
+                        <li class="d-flex align-items-center"><a href="#A2" data-bs-toggle="modal" class="m-3"><img src="/p3-ico-camera.svg" height="32px"></a> Boule cible derrière but obstacle  </li>
+                        <li class="d-flex align-items-center"><a href="#A3" data-bs-toggle="modal" class="m-3"><img src="/p3-ico-camera.svg" height="32px"></a> Boule cible entre 2 boules obstacles  </li>
+                        <li class="d-flex align-items-center"><a href="#A4" data-bs-toggle="modal" class="m-3"><img src="/p3-ico-camera.svg" height="32px"></a> Boule cible derrière boule obstacle  </li>
+                        <li class="d-flex align-items-center"><a href="#A5" data-bs-toggle="modal" class="m-3"><img src="/p3-ico-camera.svg" height="32px"></a> But cible  </li>
+                    </ul>
+                </div> 
+
+
+
+
+
+
+
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center">
+                    <h4 class="w-100 text-start text-primary fs-6 text-nowrap fw-bold">Taux de réalisation % (15/12 pts)</h4>
+                    <table class="table table-dark table-striped text-light">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="height:3rem"></th>
+                                <th scope="col">6m</th>
+                                <th scope="col">7m</th>
+                                <th scope="col">8m</th>
+                                <th scope="col">9m</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-center">
+                                <th scope="row" class="text-start">Léa</th>
+                                <td>20</td>
+                                <td>58</td>
+                                <td>50</td>
+                                <td>50</td>
+                                <td class="main-info text-warning">44.5</td>
+                            </tr>
+                            <tr class="text-center">
+                                <th scope="row" class="text-start">Cindy</th>
+                                <td>67</td>
+                                <td>75</td>
+                                <td>58</td>
+                                <td>67</td>
+                                <td class="main-info text-warning">66.7</td>
+                            </tr>
+                        </tbody>
+                    </table>  
+                </div>     
+            </div>
+        </div>
+
+
+        <div class="card bg-black text-light border border-light">
+            <div class="row g-0 p-0 m-0">
+                <div class="col-md-5 position-relative">
+                    <img src="./p2-img-interview.png" class="img-fluid rounded-start" alt="...">
+                    <audio controls class="position-absolute bottom-0 start-0 w-100" style="z-index:20;">
+                        <source src="./p2-aud-interview.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                    </audio> 
+                </div>
+                <div class="col-md-7">
+                    <div class="card-header bg-black border-bottom border-dark">
+                        <h5 class="card-title p-0 m-0 text-light ff-flood fs-3">Interview de la gagnante</h5>
+                    </div>                
+                    <div class="card-body">
+                        <p class="card-text overflow-scroll" style="max-height:200px;">
+                            <span class="text-primary">Commentateur 1 :</span> Un grand bravo à vous! vous avez démontré au cours de cette finale que vous aviez un talent extraordinaire. Ca vous vient d'où? de votre papa? 
+                            <br>
+                            <br>
+                            <span class="text-primary">Cindy :</span> j'ai commencé à l'age de 8 ans avec ma famille.
+                            j'ai attaqué mes premiers concours à environ 9-10 ans puis mes premières sélection vers 12 ans.
+                            il a fallu quand même batailler car les sélections étaient assez difficiles face à des jeunes femmes qui avaient deja fait leurs preuves.
+                            J'ai su faire la part des choses et puis j'ai rencontré Alison (Rodriguez) à firminy-vert. 
+                            On avait la même passion toutes les deux, on s'est vite intégrées dans le monde des féminines.
+                            Sa tante qui est une grande joueuse (Angelique Colombet) a cru en nous et nous a poussé à progresser.
+                            <br>
+                            <br>
+                            <span class="text-primary">Commentateur 2 :</span> j'ai pronostiqué que tu n'allais pas tarder à intégrer l'équipe de France 
+                            en vu des prochains championnats du monde féminins parce que la France court après un titre 
+                            mondial depuis des années. Je pense que tu peux être la joueuse qui lui amenera ça.
+                            Est ce que toi tu y penses?
+                            <br>
+                            <br>
+                            <span class="text-primary">Cindy :</span> Je vais d'abord faire les championnats du monde d'europe sénior.
+                            J'aimerais y aller mais je préfère garder les pieds sur terre, il reste encore deux et deux ans c'est long.
+                            <br>
+                            <br>
+                            <span class="text-primary">Commentateur 1 :</span> Merci Cindy.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-black border-bottom border-dark">
+                        <a href="https://www.petanquefrancaise.com/" class="main-info" target="blank">Les étapes du PPF 2022</a>
+                    </div>      
+                </div>
+            </div>
+        </div>
+
+
     </div>
+
+   
+        
+            <div class="modal fade h-100" id="A1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content h-100 bg-dark">
+                        <div class="modal-header d-flex justify-content-start">
+                            <img src="./p2-ico-firstpart.svg" height="60rem" class="me-2">
+                        <h5 class="modal-title text-light" id="exampleModalLabel">Boule cible seule</h5>
+                        
+                        </div>
+                        <div class="modal-body p-0 m-0 row">
+                            <div class="main-info">Léa</div>
+                            <video class="col-12 p-0 m-0" height="auto" autoplay loop muted>
+                                <source src="./p2-mov-lea-A1.mp4" type="video/mp4">    
+                                Votre navigateur ne permet pas de lire la vidéo.
+                            </video> 
+                            <div class="main-info">Cindy</div>
+                            <video class="col-12 p-0 m-0" height="auto" autoplay loop muted>
+                                <source src="./p2-mov-cindy-A1.mp4" type="video/mp4">    
+                                Votre navigateur ne permet pas de lire la vidéo.
+                            </video> 
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary w-100" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+  <div class="modal fade h-100" id="A2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content h-100 bg-dark">
+        <div class="modal-header d-flex justify-content-start">
+            <img src="./p2-ico-secondpart.svg" height="60rem" class="me-2">
+          <h5 class="modal-title text-light" id="exampleModalLabel">Boule cible derrière but obstacle</h5>
+        
+        </div>
+        <div class="modal-body p-0 m-0 row">
+            <div class="main-info">Léa</div>
+            <video class="col-12 p-0 m-0" height="auto" autoplay loop muted>
+                <source src="./p2-mov-lea-A2.mp4" type="video/mp4">    
+                Votre navigateur ne permet pas de lire la vidéo.
+            </video> 
+            <div class="main-info">Cindy</div>
+            <video class="col-12 p-0 m-0" height="auto" autoplay loop muted>
+                <source src="./p2-mov-cindy-A2.mp4" type="video/mp4">    
+                Votre navigateur ne permet pas de lire la vidéo.
+            </video> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary w-100" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade h-100" id="A3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content h-100 bg-dark">
+        <div class="modal-header d-flex justify-content-start">
+            <img src="./p2-ico-thirdpart.svg" height="60rem" class="me-2">
+          <h5 class="modal-title text-light" id="exampleModalLabel">Boule cible entre deux boules obstacles</h5>
+        
+        </div>
+        <div class="modal-body p-0 m-0 row">
+            <div class="main-info">Léa</div>
+            <video class="col-12 p-0 m-0" height="auto" autoplay loop muted>
+                <source src="./p2-mov-lea-A3.mp4" type="video/mp4">    
+                Votre navigateur ne permet pas de lire la vidéo.
+            </video> 
+            <div class="main-info">Cindy</div>
+            <video class="col-12 p-0 m-0" height="auto" autoplay loop muted>
+                <source src="./p2-mov-cindy-A3.mp4" type="video/mp4">    
+                Votre navigateur ne permet pas de lire la vidéo.
+            </video> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary w-100" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade h-100" id="A4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content h-100 bg-dark">
+        <div class="modal-header d-flex justify-content-start">
+            <img src="./p2-ico-fourthpart.svg" height="60rem" class="me-2">
+          <h5 class="modal-title text-light" id="exampleModalLabel">Boule cible derrière boule obstacle</h5>
+        
+        </div>
+        <div class="modal-body p-0 m-0 row">
+            <div class="main-info">Léa</div>
+            <video class="col-12 p-0 m-0" height="auto" autoplay loop muted>
+                <source src="./p2-mov-lea-A4.mp4" type="video/mp4">    
+                Votre navigateur ne permet pas de lire la vidéo.
+            </video> 
+            <div class="main-info">Cindy</div>
+            <video class="col-12 p-0 m-0" height="auto" autoplay loop muted>
+                <source src="./p2-mov-cindy-A4.mp4" type="video/mp4">    
+                Votre navigateur ne permet pas de lire la vidéo.
+            </video> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary w-100" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade h-100" id="A5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content h-100 bg-dark">
+        <div class="modal-header d-flex justify-content-start">
+            <img src="./p2-ico-fifthpart.svg" height="60rem" class="me-2">
+          <h5 class="modal-title text-light" id="exampleModalLabel">But cible</h5>
+        
+        </div>
+        <div class="modal-body p-0 m-0 row">
+            <div class="main-info">Léa</div>
+            <video class="col-12 p-0 m-0" height="auto" autoplay loop muted>
+                <source src="./p2-mov-lea-A5.mp4" type="video/mp4">    
+                Votre navigateur ne permet pas de lire la vidéo.
+            </video> 
+            <div class="main-info">Cindy</div>
+            <video class="col-12 p-0 m-0" height="auto" autoplay loop muted>
+                <source src="./p2-mov-cindy-A5.mp4" type="video/mp4">    
+                Votre navigateur ne permet pas de lire la vidéo.
+            </video> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary w-100" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+ 
+    
+</div>
+
+<h2 class="title text-start w-100 my-3">Trophée l'Equipe</h2>
+
+
+<div class="card mb-3 w-100 bg-black border border-light" >
+    <div class="row g-0">
+        <div class="col-12 col-lg-5 d-flex flex-row justify-content-start align-items-center p-2">
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center position-relative text-danger" >
+                
+                <div class="d-flex flex-row justify-content-between w-100" style="z-index:3; padding:1rem;">
+                    <div class="d-flex flex-column gap-0">
+                        <h2 class="ff-stencil text-light" style="font-size:1.5rem; z-index:1; top:-1.5rem;">Darodes</h2>
+                        <h2 class="position-absolute ff-nautigal text-primary fw-bold " style="z-index:1; top:-0.5rem;">Charlotte</h2>
+                    </div>
+                    <div class="d-flex flex-column gap-0">
+                        <h2 class="ff-stencil text-light" style="font-size:1.5rem; z-index:1; top:-1.5rem;">Peyrot</h2>
+                        <h2 class="position-absolute ff-nautigal text-primary fw-bold" style="z-index:1; top:-0.5rem;">Cindy</h2>
+                    </div>
+                </div>
+            
+
+
+                <div class="w-100 d-flex justify-content-between align-items-end position-relative" style=max-width:26rem; >
+                    <img src="p2-img-trophee-darodes.png" class="position-relative w-75 me-auto"  alt="">
+                    <img src="p2-img-trophee-peyrot.png" class="position-absolute h-100 ms-auto end-0" alt="">
+                    <quote class="position-absolute text-warning fs-6 bg-black px-3 text-center w-100" style="bottom:3rem;">
+                        "Une doublette redoutable..."</quote>
+                    <div class="position-absolute justify-self-center align-self-center text-warning text-center ff-stencil w-100 fs-5" style="top:-1.5rem; z-index:1;">Wild card</div>
+                    <div class="position-absolute master-summary collapse h-100 w-100 bg-black"></div>
+                </div>
+                
+                <video class="master-summary p-0 m-0 collapse position-absolute bg-dark" style="top:3rem; max-height:78%; width:100%; z-index:2;" controls>
+                    <source src="./p2-mov-summary.mp4" type="video/mp4">    
+                    Votre navigateur ne permet pas de lire la vidéo.
+                </video>
+
+
+                <div class="position-absolute bottom-0 d-flex gap-2 border border-light justify-content-center bg-black overflow-hidden py-1" style="width:100%; max-width:26rem; height:2.5rem; z-index:3;">
+                    <div class="logo-stripe position-relative text-nowrap" style="height:2rem;">
+                        <img src="p2-logo-equipe.png" style="height:2rem;" alt="">
+                        <img src="p2-logo-obut.png" style="height:2rem;" alt="">
+                        <img src="p2-logo-ffpjp.png" style="height:2rem;" alt="">
+                        <img src="p2-logo-fipjp.png" style="height:2rem;" alt="">
+                        <img src="p2-logo-shilton.jpg" style="height:2rem;" alt="">
+                        <img src="p2-logo-equipe.png" style="height:2rem;" alt="">
+                        <img src="p2-logo-obut.png" style="height:2rem;" alt="">
+                        <img src="p2-logo-ffpjp.png" style="height:2rem;" alt="">
+                        <img src="p2-logo-fipjp.png" style="height:2rem;" alt="">
+                        <img src="p2-logo-shilton.jpg" style="height:2rem;" salt="">
+                        <img src="p2-logo-equipe.png" style="height:2rem;" alt="">
+                        <img src="p2-logo-obut.png" style="height:2rem;" alt="">
+                        <img src="p2-logo-ffpjp.png" style="height:2rem;" alt="">
+                        <img src="p2-logo-fipjp.png" style="height:2rem;" alt="">
+                        <img src="p2-logo-shilton.jpg" style="height:2rem;" salt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-7 position-relative d-flex flex-column">
+            <div class="card-header w-100 bg-black border-bottom border-dark">
+                <h5 class="text-light ff-flood fs-3">Finale féminine 2019 <br> Wild card contre Thaïlande</h5>
+            </div>
+
+            <div class="ovrflw-scrll card-body w-100 position-relative overflow-auto text-light border-bottom border-dark">
+
+                <p class="text-light">Une édition dominée par la Thaïlande et le Cambodge
+                    <ul class="row list-unstyled">
+                        <li class="col-12 col-md-6 col-xl-4 text-nowrap"><b class="text-primary">Meilleure doublette Femmes</b> <br> Wild Card :
+                            <ul>
+                                <li>Charlotte Darodes</li>
+                                <li>Cindy Peyrot</li>
+                            </ul> 
+                        </li> 
+                        <li class="col-12 col-md-6 col-xl-4  text-nowrap"><b class="text-primary">Meilleure triplette Femmes</b> <br> Thaïlande :
+                            <ul>
+                                <li>Thongsri Thamakord</li>
+                                <li>Phantipha Wongchuvej</li>
+                                <li>Nantawan Fueangsanit</li>
+                            </ul> 
+                        </li> 
+                        <li class="col-12 col-md-6 col-xl-4  text-nowrap"><b class="text-primary">Meilleure individuel Femmes</b> <br> Cambodge :
+                            <ul>
+                                <li>Sreya Un</li>
+                            </ul> 
+                        </li> 
+                        <li><b class="text-primary">Meilleure nation féminine :</b> Thaïlande</li>
+                        <li><b class="text-primary">Meilleure joueuse :</b> Sreya Un (Cambodge) </li>
+                    </ul>
+                </p>   
+
+            </div> 
+            <a href="https://www.trophee-lequipe-petanque.com/" class="main-info ps-3 my-2 border-bottom border-dark" target="blank">Toute la compétition</a>
+            <div class="d-flex justify-content-start align-items-center w-100">
+                <a href=".master-summary" class="bottom-0 end-0 d-flex justify-content-start align-items-center mt-2" data-bs-toggle="collapse" style="z-index:2;"><img src="/p3-ico-camera.svg" class="mb-3 ms-3" height="32px"></a>        
+                <a href="#explanation-wildcard" data-bs-toggle="collapse"><img src="/p3-ico-question.svg" class="m-3" height="32px"></a> 
+                <a href="#cd-portrait" class="position-absolute ff-nautigal fs-3 text-light text-nowrap me-1" 
+                data-bs-toggle="collapse"
+                style="bottom:0; right:0; padding:1rem;">Charlotte Darodes</a> 
+            </div>
+
+
+                      <!-- fenêtre masquée qui est découverte par click sur bouton interrogation -->
+                      <div style="position:absolute; bottom:3.5rem; z-index:3;">
+                        <div class="collapse " id="explanation-wildcard">
+                            <div class="bg-dark p-3 border border-light rounded text-light" style="width: 100%;">
+                                <dt>Wild card :</dt>
+                                <dd>également appelée invitation privilégiée, ou tout simplement invitation, est un terme utilisé 
+                                    dans un certain nombre de sports pour désigner une autorisation exceptionnelle 
+                                    accordée à un joueur ou à une équipe de participer à une épreuve 
+                                    bien qu'ils ne répondent pas aux critères communs de sélection. <br>
+                                    Les joueurs bénéficiaires d'une telle invitation sont directement admis dans le
+                                    tableau final ou dans le tableau des qualifications, lorsque des « cases vides »
+                                     y sont spécialement aménagées.
+                                </dd>   
+                                <button class="btn-outline-primary rounded-3 w-100 bg-dark"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#explanation-wildcard" 
+                                >Close</button>                            
+                            </div>
+                        </div>
+                    </div>
+
+
+       
+ 
+
+             <!--fenêtre masquée qui est découverte par click sur signature-->
+             <div style="position:absolute; bottom:3.5rem; right:0; z-index:3;">
+                <div class="collapse " id="cd-portrait">
+                    <div class="bg-dark p-3 border border-light rounded w-100">       
+                        <p class="fw-bold" style="color:var(--main-color);">Charlotte Darodes</p>
+                        <p class="text-primary fw-bold">Milieu - excelle aux points comme au tir</p>
+                        <p  class="text-light" >Date de naissance: 2 août 1992</p>
+                        <table class="table table-dark fs-6 fw-normal" style="width:100%;">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Competition</th>
+                                    <th scope="col">or</th>
+                                    <th scope="col">arg.</th>
+                                    <th scope="col">bro.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Chp du monde</th>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Chp d'Europe</th>
+                                    <td>2</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Chp de France</th>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="btn-outline-primary rounded-3 w-100 bg-dark"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#cd-portrait" 
+                        >Close</button>
+                    </div>
+                </div>
+            </div> 
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<div class="saut-page"></div>
+
+<footer class="border border-light" style="position:absolute; bottom:0; width:100vw; border-radius:2rem;">
+
+    <a class="row btn menu-btn m-0 p-0" href="https://www.petanquefrancaise.com/" target="blank">le site PPF</a>
+    <a class="row btn menu-btn m-0 p-0" href="https://www.mastersdepetanque.fr/" target="blank">Masters de pétanque</a>
+    <a class="row btn menu-btn m-0 p-0" href="https://www.123petanque.com/" target="blank">Dans mon département</a>
+</footer>
+
+
+
 
     <!-- Bootstrap script bundle from Content Delivery Network -->
     <script 

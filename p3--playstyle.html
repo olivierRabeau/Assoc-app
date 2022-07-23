@@ -33,6 +33,12 @@
         margin:0;
         padding:0;
     }
+    th, td {
+        margin:0 !important;
+        padding:0.2rem !important;
+        text-align:center !important;
+    }
+
     </style>
 </head>
 
@@ -68,13 +74,13 @@
         <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-bottom"><img src="/nav-ico-list.svg"  height="40px" width="40px"></button>
         <div class="offcanvas offcanvas-bottom border-dark" tabindex="-1" id="offcanvas-bottom">
             <div class="nav-listlink" >
-                <a href="/p2--competition.html" class="nav-link border-dark me-auto">
-                    <img src="/nav-ico-calendar.svg" class="nav-icon">
-                    <h4 class="nav-text">événement</h4>
-                </a>    
                 <a href="/p1--association.html" class="nav-link border-dark">
                     <img src="/nav-ico-association.svg" class="nav-icon">
                     <h4 class="nav-text">association</h4>
+                </a>
+                <a href="/p2--competition.html" class="nav-link border-dark me-auto">
+                    <img src="/nav-ico-calendar.svg" class="nav-icon">
+                    <h4 class="nav-text">événement</h4>
                 </a>
             </div>
         </div>
@@ -82,20 +88,20 @@
     
     <nav class="nav-top" style="z-index:20;">
         <div class="nav-listlink  d-flex flex-row" >
-            <a href="/p2--competition.html" class="nav-link border-dark">
-                <img src="/nav-ico-calendar.svg" class="nav-icon">
-                <h4 class="nav-text">événement</h4>
-            </a>
             <a href="/p1--association.html" class="nav-link border-dark">
                 <img src="/nav-ico-association.svg" class="nav-icon">
                 <h4 class="nav-text">association</h4>
+            </a>
+            <a href="/p2--competition.html" class="nav-link border-dark">
+                <img src="/nav-ico-calendar.svg" class="nav-icon">
+                <h4 class="nav-text">événement</h4>
             </a>
         </div>
     </nav>
 
     <main>
         <section class="row gap-2 p-2">
-            <h2 class="section-title">Mon style de jeu</h2>
+            <h2 class="section-title">Les styles de jeu</h2>
             <div class="anchor d-lg-none" id="pointeuse"></div>
 
             <article class="card col bg-dark align-items-start m-0 mb-3 p-0 text-light">    
@@ -114,8 +120,12 @@
                                     <source src="/p3-mov-accurate.mp4" type="video/mp4">    
                                 Votre navigateur ne permet pas de lire la vidéo.
                                 </video>         
-                            </div>              
-                            <img class="w-100" src="/p3-img-accurate.png">    
+                            </div>
+                                       
+                            <img class="w-100" src="/p3-img-accurate.png">
+                            
+
+                            
                         </div> 
 
                         <div class="col p-0">
@@ -160,6 +170,73 @@
                                             pour donner l’effet escompté.
                                         </dd>
                                     </dl>
+                                    <button class="btn-outline-primary rounded-3 w-100 bg-dark"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#explanation-accurate" 
+                                    >Close</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- fenêtre masquée qui est découverte par click sur signature -->
+                        <div style="position:absolute; bottom:0; z-index:1;">
+                            <div class="collapse " id="am-portrait">
+                                <div class="bg-dark p-3 border border-light rounded" style="width: 100%;">       
+                                    <p class="fw-bold" style="color:var(--main-color);">Anna Maillard </p>
+                                    <p class="text-primary fw-bold">Pointeuse ou milieu </p>
+                                    <p>Date de naissance: 28 septembre 1997</p>
+                                    <table class="table table-dark fs-6 fw-normal" style="width:94%;">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Competition</th>
+                                                <th scope="col">or</th>
+                                                <th scope="col">arg.</th>
+                                                <th scope="col">bro.</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Chp du monde</th>
+                                                <td>1</td>
+                                                <td>3</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Jeux mondiaux</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Coupe des confédérations</th>
+                                                <td>1</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Chp d'Europe</th>
+                                                <td>4</td>
+                                                <td>2</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Jeux méditerranéens</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Chp de France</th>
+                                                <td>2</td>
+                                                <td>2</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <button class="btn-outline-primary rounded-3 w-100 bg-dark"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#am-portrait" 
+                                    >Close</button>
                                 </div>
                             </div>
                         </div>
@@ -167,10 +244,11 @@
                     </div>           
                 </div>
 
+
                 <div class="d-flex justify-content-between justify-content-lg-start align-items-center w-100">
                     <a href=".video" data-bs-toggle="collapse"><img src="/p3-ico-camera.svg" class="m-3" height="32px"></a>      
                     <a href="#explanation-accurate" data-bs-toggle="collapse"><img src="/p3-ico-question.svg" class="m-3" height="32px"></a>
-                    <a href="" class="ff-nautigal fs-3 text-light ms-auto pe-3" >Anna Maillard</a>                 
+                    <a href="#am-portrait" class="ff-nautigal fs-3 text-light ms-auto pe-3" data-bs-toggle="collapse" >Anna Maillard</a>                 
                 </div>  
 
             </article>
@@ -215,11 +293,56 @@
                                     </div>
                                 </div>
                             </div>
+
+                        <!-- fenêtre masquée qui est découverte par click sur signature -->
+                        <div style="position:absolute; bottom:0; z-index:1;">
+                            <div class="collapse " id="cb-portrait">
+                                <div class="bg-dark p-3 border border-light rounded" style="width: 100%;">       
+                                    <p class="fw-bold" style="color:var(--main-color);">Caroline Bourriaud</p>
+                                    <p class="text-primary fw-bold">Tireuse ou milieu </p>
+                                    <p>Date de naissance: 18 août 1998</p>
+                                    <table class="table table-dark fs-6 fw-normal" style="width:94%;">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Competition</th>
+                                                <th scope="col">or</th>
+                                                <th scope="col">arg.</th>
+                                                <th scope="col">bro.</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Chp du monde</th>
+                                                <td>1</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Jeux mondiaux</th>
+                                                <td>1</td>
+                                                <td></td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Coupe des confédérations</th>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <button class="btn-outline-primary rounded-3 w-100 bg-dark"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#cb-portrait" 
+                                    >Close</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>       
                 </div>
                 <div class="d-flex justify-content-between justify-content-lg-start align-items-center w-100">
                     <a href=".video" class="d-flex justify-content-start align-items-center mt-2 w-100" data-bs-toggle="collapse"><img src="/p3-ico-camera.svg" class="mb-3 ms-3" height="32px"></a>        
-                    <a href="" class="ff-nautigal fs-3 text-light ms-auto pe-3 text-nowrap" >Caroline Bourriaud</a>
+                    <a href="#cb-portrait" class="ff-nautigal fs-3 text-light ms-auto pe-3 text-nowrap" data-bs-toggle="collapse" >Caroline Bourriaud</a>
                 </div>
             </article>
 
@@ -260,7 +383,6 @@
                                         <li>Tir "au fer"</li>
                                         <li>Tir "à la rafle"</li>
                                         <li>faire un "carreau"</li>
-                                        <li>faire un "palet"</li>
                                     </ul>
                                 </div>
                             </div>
@@ -282,25 +404,64 @@
                                             Il la dégomme tout en plaçant sa boule dans un rayon d’un mètre environ.
                                         </dd>
                                     </dl>
+                                    <button class="btn-outline-primary rounded-3 w-100 bg-dark"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#explanation-shooter" 
+                                    >Close</button>
                                 </div>
                             </div>
                         </div>
+                        
+                        <!--fenêtre masquée qui est découverte par click sur signature-->
+                        <div style="position:absolute; bottom:0; z-index:1;">
+                            <div class="collapse " id="cl-portrait">
+                                <div class="bg-dark p-3 border border-light rounded" style="width: 100%;">       
+                                    <p class="fw-bold" style="color:var(--main-color);">Céline Lebossé</p>
+                                    <p class="text-primary fw-bold">Tireuse</p>
+                                    <p>Date de naissance: 05 juillet 1998</p>
+                                    <table class="table table-dark fs-6 fw-normal" style="width:94%;">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Competition</th>
+                                                <th scope="col">or</th>
+                                                <th scope="col">arg.</th>
+                                                <th scope="col">bro.</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Coupe des confédérations</th>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p><strong>Record du monde féminine Team Toro </strong> <br>
+                                    avec 371 boules tapées sur 500 <br>
+                                    Equipe : Jenny Rathberger, Chloé Roux, Caroline Bourriaud et Camille Durand</p> 
+                                    <button class="btn-outline-primary rounded-3 w-100 bg-dark"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#cl-portrait" 
+                                    >Close</button>
+                                </div>
+                            </div>
+                        </div>                        
 
                     </div>
-
                 </div>
 
                 <div class="d-flex justify-content-between justify-content-lg-start align-items-center w-100">
                     <a href=".video" data-bs-toggle="collapse"><img src="/p3-ico-camera.svg" class="m-3" height="32px"></a>          
                     <a href="#explanation-shooter" data-bs-toggle="collapse"><img src="/p3-ico-question.svg" class="m-3" height="32px"></a>  
-                    <a href="" class="ff-nautigal fs-3 text-light ms-auto pe-3" >Céline Lebossé</a>      
+                    <a href="#cl-portrait" class="ff-nautigal fs-3 text-light ms-auto pe-3" data-bs-toggle="collapse">Céline Lebossé</a>      
                 </div>  
 
             </article>
 
         </section>
         <section class="row w-100 mx-auto p-0 position-relative align-items-start text-light">
-            <h2 class="section-title">Ma triplette</h2>             
+            <h2 class="section-title">Les boules</h2>             
             <div class="col-12 col-xxl-6">
                 <article class="row justify-content-around p-0">
                     <h2 class="title">Conception</h2>
@@ -329,9 +490,14 @@
                             <li>Poids -> stabilité et distance </li>
                             <li>Dureté -> rebond </li>
                             <li>Finition (stries) -> frottements</li>
-                        </ul>      
+                        </ul> 
+                        <h4><b>Personnalisation</b></h4>
+                        <ul>
+                            <li>gravage laser (superficiel)</li>
+                            <li>fraisage (profond) </li>
+                        </ul>        
                     </div>
-                    <div class="col-12 col-md-6 mt-3 p-3 d-flex flex-column"> 
+                    <div class="col-12 col-md-6 mt-3 p-3 d-flex flex-column gap-1"> 
                         <div class="position-relative mb-auto"> 
                             <div id="look-inside" class="collapse">                         
                                 <video class="bg-black position-absolute top-0 left-0 border border-light rounded w-100" autoplay loop muted >
@@ -351,6 +517,7 @@
                             <img src="/p3-img-triplette.png" class="border border-light rounded w-100">
                         </div>    
                             <img src="/p3-img-build-steps.jpg" class="border border-light rounded w-100 d-none d-md-block d-lg-none d-xxl-block"> 
+                            <img src="/p3-img-build-perso.jpg" class="border border-light rounded w-100 d-none d-md-block d-lg-none d-xxl-block"> 
                         </div>
                 </article>  
             </div>
@@ -385,15 +552,68 @@
                         </ul>            
                     </div>
                     <div class="col-12 col-md-6 h-100  mt-3 p-3 position-relative">
+                        
+                        <!--fenêtre masquée qui est découverte par click sur signature-->
+                        <div style="position:absolute; bottom:0; z-index:2;">
+                            <div class="collapse " id="cp-portrait">
+                                <div class="bg-dark p-3 border border-light rounded" style="width: 95%;">       
+                                    <p class="fw-bold" style="color:var(--main-color);">Cindy Peyrot</p>
+                                    <p class="text-primary fw-bold">Tireuse ou milieu</p>
+                                    <p>Date de naissance: 30 mars 1994</p>
+                                    <table class="table table-dark fs-6 fw-normal" style="width:100%;">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Competition</th>
+                                                <th scope="col">or</th>
+                                                <th scope="col">arg.</th>
+                                                <th scope="col">bro.</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Coupe des confédérations</th>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Chp d'Europe</th>
+                                                <td>1</td>
+                                                <td></td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Chp de France</th>
+                                                <td>3</td>
+                                                <td>1</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <button class="btn-outline-primary rounded-3 w-100 bg-dark"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#cp-portrait" 
+                                    >Close</button>
+                                </div>
+                            </div>
+                        </div>   
+                            <quote class="position-absolute top-0 left-0 text-warning bg-black fw-bold fs-3 p-1" style="line-height:1.5rem; vertical-align:middle; transform:rotate(-35deg) translate(-3.5rem); translateY(0.6rem);">"La patte gauche"</quote>
                             <img src="/p3-img-cindy.jpg" class="mh-100 mw-100 w-auto border border-light rounded">
-                            <a href="" class="ff-nautigal fs-3 text-light position-absolute top-0 start-0 px-3 text-nowrap bg-dark m-3 rounded border border-light" >Cindy Peyrot</a>
+                            <a 
+                                href="#cp-portrait" 
+                                data-bs-toggle="collapse" 
+                                style="z-index:1;" 
+                                class="ff-nautigal fs-3 text-light position-absolute bottom-0 end-0 px-3 text-nowrap bg-dark m-3 rounded border border-light"
+                            >Cindy Peyrot</a>
                     </div>
                 </article>
             </div>
         </section>
     </main>
 
-    <footer class="bg-black">
+    <div class="saut-page mb-3"></div>
+
+    <footer class="bg-black m-0">
         <a class="row btn menu-btn m-0 p-0 text-black" href="/index.html">Pour en savoir plus ...</a>
         <img class="d-none card-image" src="/p3-img-footer.png" >  
         <p>Actualités - compétitions - Portraits joueuses/joueurs - forum </p>
