@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fédérer les associations et cadrer la pratique">
-    <meta name="keywords" content="pétanque">  
-
+    <meta name="description" content="Découvrir la pétanque et rôle de la FFPJP (Fédération française de pétanque et de jeu provençal). 
+    Trouver un club affilié à proximité">
+ 
     <!-- Bootstrap stylesheet from Content Delivery Network -->
     <link 
     rel="stylesheet" 
@@ -15,592 +15,658 @@
 
     <!-- Website stylesheet -->
     <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./style-p1.css">
+    <link rel="stylesheet" href="./style-p1-chrono-cardsgroup.css">
     <link rel="stylesheet" href="./style-animation.css">
 
     <!-- favorite icon -->
     <link rel="icon" type="image/png" href="/index-ico-favicon.png">
 
-    <title>Association</title>
-<style>
-  .anchor{
-    position:absolute;
-    width:100%;
-    height:0;
-    top:-5rem;
-  }
-
-  .list-group-item-action{
-    display:none;
-  }
-  
-.list-group{
-  bottom:3rem;
-  z-index:1;
-  border:none;
-}
-
-  .list-group-item-action.active{
-    display: block;
-    border:none;
-  }
-
-  @keyframes panorama{
-  0%{left:0;
-  }
-  50%{
-    left:(-89vh + 50vw);
-  }
-  100%{
-    left:calc(-178vh + 100vw);    
-  }
-}
-
-  /* mon image est au format 16/9 par conséquent en fixant la hauteur à 70vh je connais le décalage à appliquer
-  c'est à dire (70/9)*16 = 124.4 vh . mon décalage est alors responsive.
-  L'ajout de 100% de la largeur du container empèche l'image de devoiler l'arrière plan.
-  La valeur pour 50% est la valeur final divisée par 2 popur conserver la linéarité de l'animation.*/
-  .ptour-img{
-    position:fixed;
-    bottom:0;
-    height:100vh;
-    z-index:20;
-    animation-name:"panorama";
-    animation-duration: 20s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-timing-function:  linear;
-    animation-fill-mode: forwards;
-
-  }
-
-
-
-</style>
+    <title>Découvrir la pétanque</title>
 
 </head>
 
 <body class="container" data-bs-spy="scroll" data-bs-target="#questions" data-offset="0">
-<header data-bs-toggle="offcanvas" data-bs-target="#offcanvas-bottom">
-    <h1 class="main-title h-100 ps-3">PETANQUE <img src="/index-ico-bowl.png" class="header-icon"></h1>
-    <div class="page-stamp position-absolute bg-black ff-flood rounded-pill">association</div> 
-    <img class="menu-icon " src="/nav-ico-list.svg"  height="40px" width="40px">
-</header>  
 
-<h2 class="section-title  w-100 text-start ">Définition </h2>
-<dl class="w-100">
-<dt >Pétanque :</dt>
-<dd class="text-light w-100">« le jeu à pieds-plantés » (du provençal : pèd, « pieds », et tanca, « planté ») est un jeu de boules dérivé du jeu provençal</dd>
-</dl>
+<!--****************************** Scrollspy pour accessibilité *********************************-->
 
+  <div id="questions" class="list-group position-fixed fixed-bottom w-100 d-sm-none">
+    <a class="list-group-item list-group-item-action active" href="#origines">
+        <button class="w-100 d-flex flex-row justify-content-start align-items-center p-0 m-0 bg-dark border-0 rounded-3" 
+            data-bs-toggle="modal" 
+            data-bs-target="#variants">
+            <img src="/p3-ico-question.svg" class="me-2" height="32px" alt="Point d'interrogation - acces au contenu masqué">                  
+            <div class="text-light h-100 ff-flood">Les variantes du jeu</div>          
+        </button>
+    </a>
+    <a class="list-group-item list-group-item-action" href="#pratique">
+        <button class="w-100 d-flex flex-row justify-content-start align-items-center p-0 m-0 bg-dark border-0 rounded-3" 
+            data-bs-toggle="modal" 
+            data-bs-target="#fed-roles">
+            <img src="/p3-ico-question.svg" class="me-2" height="32px" alt="Point d'interrogation - acces au contenu masqué">                  
+            <div class="text-light h-100 ff-flood">Role des organismes</div>          
+        </button>
+    </a>
+    <a class="list-group-item list-group-item-action d-none" href="#end"></a>
+  </div>  
 
-<div class="m-0 p-0 w-100 position-relative"> 
-  <div class="anchor" id="origines" ></div>   
-  <h2 class="section-title  w-100 text-start ">Les origines <sub class="d-md-none" style="font-family:arial; font-size:0.8rem; color:grey;">( 30 sec )</sub></h2>
-  <div class="progress d-md-none">
-    <div class="progress-bar" role="progressbar"></div>
-  </div>
-</div>
+<!--************************************** Navigation *******************************************-->
 
-<div class="origin d-none d-md-grid">
-  <div class="unit">    
-    <div class="minicards-top">       
-      <p class="w-100 text-light">
-        <span class="badge-sm">1</span>
-        Le jeu de boules aurait été créé en Gaule avec des boules en argile, pierre ou bois
-      </p>
-    </div>
-    <div class="chronograph">
-      <div class="line"></div>
-      <div class="chronopoint">
-        <div class="date-bot" >- 100</div>
-        <img src="./nav-ico-triplette.svg">
-        <div class="link-top"></div>
-      </div>
-      <div class="chronopoint">
-        <div class="date-top" >18 . .</div>
-        <img src="./nav-ico-triplette.svg">
-        <div class="link-bot"></div>
-      </div>
-    </div>
-    <div class="minicards-bot">      
-      <p class="w-100 text-light">
-        <span class="badge-sm">2</span>
-        la Fédération de la <em> boule lyonnaise </em> et régionale est créée (FFB à partir de 1942)
-      </p>
-    </div>
-  </div>
+<!-- pour mobiles et tablettes -->
 
-  <div class="unit">
-    <div class="minicards-top">       
-      <p class="w-100 text-light">
-        <span class="badge-sm">3</span>
-        chaque région, ou presque, introduit une variante d'usage
-      </p>
-    </div>
-    <div class="chronograph">
-      <div class="line"></div>
-      <div class="chronopoint">
-        <div class="date-bot" > . . .</div>
-        <img src="./nav-ico-triplette.svg">
-        <div class="link-top"></div>
-      </div>
-      <div class="chronopoint">
-        <div class="date-top" >1906</div>
-        <img src="./nav-ico-triplette.svg">
-        <div class="link-bot"></div>
-      </div>
-    </div>
-    <div class="minicards-bot">      
-      <p class="w-100 text-light">
-        <span class="badge-sm">4</span>
-        les Méridionaux se passionnent pour le <em> jeu provençal </em> avec des règles simplifiées
-      </p>
-    </div>
-  </div>
-
-  <div class="unit">
-    <div class="minicards-top">       
-      <p class="w-100 text-light">
-        <span class="badge-sm">5</span>
-        Le jeu provençal donne naissance à <em> la pétanque </em>
-      </p>
-    </div>
-    <div class="chronograph">
-      <div class="line"></div>
-      <div class="chronopoint">
-        <div class="date-bot" >1907</div>
-        <img src="./nav-ico-triplette.svg">
-        <div class="link-top"></div>
-      </div>
-      <div class="chronopoint">
-        <div class="date-top" >1910</div>
-        <img src="./nav-ico-triplette.svg">
-        <div class="link-bot"></div>
-      </div>
-    </div>
-    <div class="minicards-bot">      
-      <p class="w-100 text-light">
-        <span class="badge-sm">6</span>
-        premier concours officiel de pétanque à La Ciotat
-      </p>
-    </div>
-  </div>
-  
-  <div class="unit">
-    <div class="minicards-top">       
-      <p class="w-100 text-light">
-        <span class="badge-sm">7</span>
-        les boules sont fabriquées en acier
-      </p>
-    </div>
-    <div class="chronograph">  
-      <div class="line"></div>    
-      <div class="chronopoint">
-        <div class="date-bot" >1927</div>
-        <img src="./nav-ico-triplette.svg">
-        <div class="link-top"></div>
-      </div>
-      <div class="chronopoint">
-        <div class="date-top" >1945</div>
-        <img src="./nav-ico-triplette.svg">
-        <div class="link-bot"></div>
-      </div>
-    </div>
-    <div class="minicards-bot">      
-      <p class="w-100 text-light">
-        <span class="badge-sm">8</span>
-        Création de la La Fédération française de pétanque et de jeu provençal (FFPJP)
-      </p>
-    </div>
-  </div>
-  
-  <div class="unit">
-    <div class="minicards-top">       
-      <p class="w-100 text-light">
-        <span class="badge-sm">9</span>
-        la pétanque est décrété « sport de haut niveau » par le ministère de la Jeunesse et des Sports
-      </p>
-    </div>
-    <div class="chronograph">
-      <div class="line"></div>
-      <div class="arrow "></div>      
-      <div class="chronopoint">
-        <div class="date-bot" >2005</div>
-        <img src="./nav-ico-triplette.svg">
-        <div class="link-top"></div>
-      </div>
-      <div class="chronopoint">
-        <div class="date-top" >2015</div>
-        <img src="./nav-ico-triplette.svg">
-        <div class="link-bot"></div>
-      </div>
-    </div>
-    <div class="minicards-bot">      
-      <p class="w-100 text-light">
-        <span class="badge-sm">10</span>
-        La pétanque devient un sport scolaire
-      </p>
-    </div>
-  </div>
-</div>  
-  
-
-<div class="elapsed-time d-flex d-md-none w-100 position-relative">
-
-    
-
-
-  <span class="title one">-100</span>
-  <span class="title two">18 . . </span>
-  <span class="title three"> . . . </span>
-  <span class="title four">1906</span>
-  <span class="title five">1907</span>
-  <span class="title six">1910</span>
-  <span class="title seven">1927</span>
-  <span class="title eight">1945</span>
-  <span class="title nine">2005</span>
-  <span class="title ten">2015</span>
-
-    <div class="w-100 h-100 m-0 p-0 text-center d-flex align-items-center justify-content-center position-relative">
-      <div class="stamp bg-dark"></div> 
-        <p class="para one ff-flood text-light">Le jeu de boules aurait été créé en Gaule avec des boules en argile, pierre ou bois</p>
-        <p class="para two ff-flood text-light">La Fédération de la <em> boule lyonnaise </em> et régionale est créée (FFB à partir de 1942)</p>
-        <p class="para three ff-flood text-light">Chaque région, ou presque, introduit une variante d'usage</p>
-        <p class="para four ff-flood text-light">Les Méridionaux se passionnent pour le <em> jeu provençal </em> avec des règles simplifiées</p>
-        <p class="para five ff-flood text-light">Le jeu provençal donne naissance à <em> la pétanque </em></p>
-        <p class="para six ff-flood text-light">Premier concours officiel de pétanque à La Ciotat</p>
-        <p class="para seven ff-flood text-light">Les boules sont fabriquées en acier</p>
-        <p class="para eight ff-flood text-light">Création de la La Fédération française de pétanque et de jeu provençal (FFPJP)</p>
-        <p class="para nine ff-flood text-light">La pétanque est décrété « sport de haut niveau » par le ministère de la Jeunesse et des Sports</p>
-        <p class="para ten ff-flood text-light">La pétanque devient un sport scolaire</p>
-    </div>
-</div>
-
-<div class="w-100 d-flex flex-row justify-content-start align-items-center p-0 m-0" data-bs-toggle="modal" data-bs-target="#explanations">
-  <img src="/p3-ico-question.svg" class="m-3" height="32px">                  
-  <div class="text-light h-100 ff-flood">Les variantes du jeu </div>          
-</div>
-
-<div id="questions" class="list-group position-fixed fixed-bottom w-100 d-sm-none">
-  <a class="list-group-item list-group-item-action active" href="#origines">
-    <div class="w-100 d-flex flex-row justify-content-start align-items-center p-0 m-0 bg-dark" data-bs-toggle="modal" data-bs-target="#explanations">
-      <img src="/p3-ico-question.svg" class="me-2" height="32px">                  
-      <div class="text-light h-100 ff-flood">Les variantes du jeu</div>          
-    </div>
-  </a>
-  <a class="list-group-item list-group-item-action" href="#pratique">
-    <div class="w-100 d-flex flex-row justify-content-start align-items-center p-0 m-0 bg-dark" data-bs-toggle="modal" data-bs-target="#explanations">
-      <img src="/p3-ico-question.svg" class="me-2" height="32px">                  
-      <div class="text-light h-100 ff-flood">Role des organismes</div>          
-    </div>
-  </a>
-  <a class="list-group-item list-group-item-action d-none" href="#end"></a>
-</div>
-
-</div>
-
-  <nav class="nav-bottom w-100">
-    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-bottom"><img src="/nav-ico-list.svg"  height="40px" width="40px"></button>
-    <div class="offcanvas offcanvas-bottom border-dark" tabindex="-1" id="offcanvas-bottom">
+<nav class="nav-bottom w-100">
+  <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-bottom"><img src="/nav-ico-list.svg"  height="40px" width="40px" alt="symbole hamburger - accès à la navigation masquée"></button>
+  <div class="offcanvas offcanvas-bottom border-dark" tabindex="-1" id="offcanvas-bottom">
         <div class="nav-listlink" >
             <a href="/p2--competition.html" class="nav-link border-dark me-auto">
-                <img src="/nav-ico-calendar.svg" class="nav-icon">
-                <h4 class="nav-text">événement</h4>
+                <img src="/nav-ico-calendar.svg" class="nav-icon" alt="symbole calendrier - acces à la page événements">
+                <div>événements</div>
             </a>    
             <a href="/p3--playstyle.html" class="nav-link border-dark">
-                <img src="/nav-ico-triplette.svg" class="nav-icon">
-                <h4 class="nav-text">équipement</h4>
+                <img src="/nav-ico-triplette.svg" class="nav-icon" alt="symbole boule - acces à la page équipement">
+                <div>équipement</div>
             </a>
         </div>
-    </div>
-  </nav>
+  </div>
+</nav>
 
-  <nav class="nav-top" style="z-index:20;">
+<!-- pour laptop et desktop -->
+
+<nav class="nav-top">
     <div class="nav-listlink  d-flex flex-row" >
         <a href="/p2--competition.html" class="nav-link border-dark">
-            <img src="/nav-ico-calendar.svg" class="nav-icon">
-            <h4 class="nav-text">événement</h4>
+            <img src="/nav-ico-calendar.svg" class="nav-icon" alt="symbole calendrier - acces à la page événements">
+            <div>événements</div>
         </a>
         <a href="/p3--playstyle.html" class="nav-link border-dark">
-            <img src="/nav-ico-triplette.svg" class="nav-icon">
-            <h4 class="nav-text">équipement</h4>
+            <img src="/nav-ico-triplette.svg" class="nav-icon" alt="symbole boule - acces à la page équipement">
+            <div>équipement</div>
         </a>
     </div>
-  </nav>
+</nav> 
+
+<!--**************************************** Entête *********************************************-->
+
+<header data-bs-toggle="offcanvas" data-bs-target="#offcanvas-bottom">
+    <div class="main-title">PETANQUE <img src="/index-ico-bowl.png" class="header-icon"></div>
+    <h1 class="page-label">association</h1> 
+    <img class="menu-icon" src="/nav-ico-list.svg">
+</header> 
+
+<!--********************************** Contenu de la page ***************************************-->
+    
+<main class="w-100">
+
+    <!--************************************ Introduction ***************************************-->
+
+    <h2 class="section-title w-100 text-start ">Définition </h2>
+    <dl class="w-100">
+        <dt >Pétanque :</dt>
+        <dd class="text-light w-100">« le jeu à pieds-plantés » (du provençal : pèd, « pieds », et tanca, « planté ») est un jeu de boules dérivé du jeu provençal</dd>
+    </dl>
+
+    <!--************************************* Les origines **************************************-->
+
+    <!-- animation pour mobile -->
+
+    <div class="m-0 p-0 w-100 position-relative"> 
+        <div class="anchor" id="origines" ></div>   
+        <h2 class="section-title  w-100 text-start ">Les origines <sub class="d-md-none" style="font-family:arial; font-size:0.8rem; color:grey;">( 30 sec )</sub></h2>
+        <div class="progress d-md-none">
+            <div class="progress-bar" role="progressbar"></div>
+        </div>
+    </div>
+
+    <div class="elapsed-time d-flex d-md-none w-100 position-relative">
+        <span class="title one">-100</span>
+        <span class="title two">18 . . </span>
+        <span class="title three"> . . . </span>
+        <span class="title four">1906</span>
+        <span class="title five">1907</span>
+        <span class="title six">1910</span>
+        <span class="title seven">1927</span>
+        <span class="title eight">1945</span>
+        <span class="title nine">2005</span>
+        <span class="title ten">2015</span>
 
 
-<div class="position-relative p-0 m-0 w-100">
-  <h2 class="section-title w-100 text-start mt-3">La pratique sportive</h2>
-  <div class="anchor h-0 w-100" id="pratique" ></div>
-</div>
-<div class="d-sm-none carousel slide w-100" data-bs-ride="carousel">
-  <div class="carousel-inner w-100">
-    <div class="carousel-item active">
-      <div class="card" >    
-        <h2 class="card-theme title w-100 text-center"> International </h2>
-          <div class="content">
-            <div class="grey-stripe-top"></div>
-            <div class="card-header border-0 top-0 p-2 m-0">
-              <span class="main-info">600 000 licenciés</span>
-              <div class="text-end">dans plus de <span class="main-info"> 100 pays</span></div>
-            </div>
-            <div class="card-body h-100 d-flex flex-row justify-content-center align-items-center">
-              <img src="/p1-img-directions.png" alt="panneau multidirectionnel">
-            </div>
-            <div class="grey-stripe-bottom"></div>              
-            <div class="card-footer bottom-0 pb-2 text-end">
-              <span class="fs-6"> Organismes de référence : </span>
-              <div class="fs-5">FIPJP / CEP</div>
-            </div>
-          </div>     
-      </div>
+        <div class="label ff-flood text-light w-100 bg-dark m-0 p-2 text-center d-flex align-items-center justify-content-center" style="height:10rem; border-radius:1rem;">
+            <p class="para one ">Le jeu de boules aurait été créé en Gaule avec des boules en argile, pierre ou bois</p>
+            <p class="para two">La Fédération de la <em> boule lyonnaise </em> et régionale est créée (FFB à partir de 1942)</p>
+            <p class="para three">Chaque région, ou presque, introduit une variante d'usage</p>
+            <p class="para four">Les Méridionaux se passionnent pour le <em> jeu provençal </em> avec des règles simplifiées</p>
+            <p class="para five">Le jeu provençal donne naissance à <em> la pétanque </em></p>
+            <p class="para six">Premier concours officiel de pétanque à La Ciotat</p>
+            <p class="para seven">Les boules sont fabriquées en acier</p>
+            <p class="para eight">Création de la Fédération française de pétanque et de jeu provençal (FFPJP)</p>
+            <p class="para nine">La pétanque est décrété « sport de haut niveau » par le ministère de la Jeunesse et des Sports</p>
+            <p class="para ten">La pétanque devient un sport scolaire</p>
+        </div>
+
     </div>
-    <div class="carousel-item">
-      <div class="card" >         
-        <h2 class="card-theme title w-100 text-center"> National </h2>
-          <div class="content">
-            <div class="grey-stripe-top"></div>
-            <div class="card-header border-0 top-0 p-2 m-0">
-              <div><span class="main-info text-start">11 <sup>ème</sup> sport</div> 
-              <div class="text-end"> avec quelques <span class="main-info">6000 clubs</span></div>
+
+    <!-- chronograph pour tablette et au delà -->
+
+    <div class="origin d-none d-md-grid">
+
+        <div class="unit">    
+            <div class="minicards-top">       
+                <p class="w-100 text-light">
+                    <span class="badge-sm">1</span>
+                    Le jeu de boules aurait été créé en Gaule avec des boules en argile, pierre ou bois
+                </p>
             </div>
-            <div class="card-body h-100 d-flex flex-row justify-content-center align-items-center">
-              <img src="/p1-img-france.png" alt="panneau multidirectionnel">
+            <div class="chronograph">
+                <div class="line"></div>
+                <div class="chronopoint">
+                    <div class="date-bot" >- 100</div>
+                    <img src="./nav-ico-triplette.svg">
+                    <div class="link-top"></div>
+                </div>
+                <div class="chronopoint">
+                    <div class="date-top" >18 . .</div>
+                    <img src="./nav-ico-triplette.svg">
+                    <div class="link-bot"></div>
+                </div>
             </div>
-            <div class="grey-stripe-bottom"></div>              
-            <div class="card-footer border-0 bottom-0 pb-2 text-end">
-              <span class="fs-6"> Organisme de référence : </span>
-              <div class="fs-5">FFPJP</div>
+            <div class="minicards-bot">      
+                <p class="w-100 text-light">
+                    <span class="badge-sm">2</span>
+                    la Fédération de la <em> boule lyonnaise </em> et régionale est créée (FFB à partir de 1942)
+                </p>
             </div>
-        </div>    
-      </div>
+        </div>
+
+        <div class="unit">
+            <div class="minicards-top">       
+                <p class="w-100 text-light">
+                    <span class="badge-sm">3</span>
+                    chaque région, ou presque, introduit une variante d'usage
+                </p>
+            </div>
+            <div class="chronograph">
+            <div class="line"></div>
+            <div class="chronopoint">
+                <div class="date-bot" > . . .</div>
+                <img src="./nav-ico-triplette.svg">
+                <div class="link-top"></div>
+            </div>
+            <div class="chronopoint">
+                <div class="date-top" >1906</div>
+                <img src="./nav-ico-triplette.svg">
+                <div class="link-bot"></div>
+            </div>
+            </div>
+            <div class="minicards-bot">      
+                <p class="w-100 text-light">
+                    <span class="badge-sm">4</span>
+                    les Méridionaux se passionnent pour le <em> jeu provençal </em> avec des règles simplifiées
+                </p>
+            </div>
+        </div>
+
+        <div class="unit">
+            <div class="minicards-top">       
+                <p class="w-100 text-light">
+                    <span class="badge-sm">5</span>
+                    Le jeu provençal donne naissance à <em> la pétanque </em>
+                </p>
+            </div>
+            <div class="chronograph">
+            <div class="line"></div>
+            <div class="chronopoint">
+                <div class="date-bot" >1907</div>
+                <img src="./nav-ico-triplette.svg">
+                <div class="link-top"></div>
+            </div>
+            <div class="chronopoint">
+                <div class="date-top" >1910</div>
+                <img src="./nav-ico-triplette.svg">
+                <div class="link-bot"></div>
+            </div>
+            </div>
+            <div class="minicards-bot">      
+                <p class="w-100 text-light">
+                    <span class="badge-sm">6</span>
+                    premier concours officiel de pétanque à La Ciotat
+                </p>
+            </div>
+        </div>
+    
+        <div class="unit">
+            <div class="minicards-top">       
+                <p class="w-100 text-light">
+                    <span class="badge-sm">7</span>
+                    les boules sont fabriquées en acier
+                </p>
+            </div>
+            <div class="chronograph">  
+            <div class="line"></div>    
+            <div class="chronopoint">
+                <div class="date-bot" >1927</div>
+                <img src="./nav-ico-triplette.svg">
+                <div class="link-top"></div>
+            </div>
+            <div class="chronopoint">
+                <div class="date-top" >1945</div>
+                <img src="./nav-ico-triplette.svg">
+                <div class="link-bot"></div>
+            </div>
+            </div>
+            <div class="minicards-bot">      
+                <p class="w-100 text-light">
+                    <span class="badge-sm">8</span>
+                    Création de la La Fédération française de pétanque et de jeu provençal (FFPJP)
+                </p>
+            </div>
+        </div>
+    
+        <div class="unit">
+            <div class="minicards-top">       
+                <p class="w-100 text-light">
+                    <span class="badge-sm">9</span>
+                    la pétanque est décrété « sport de haut niveau » par le ministère de la Jeunesse et des Sports
+                </p>
+            </div>
+            <div class="chronograph">
+            <div class="line"></div>
+            <div class="arrow "></div>      
+            <div class="chronopoint">
+                <div class="date-bot" >2005</div>
+                <img src="./nav-ico-triplette.svg">
+                <div class="link-top"></div>
+            </div>
+            <div class="chronopoint">
+                <div class="date-top" >2015</div>
+                <img src="./nav-ico-triplette.svg">
+                <div class="link-bot"></div>
+            </div>
+            </div>
+            <div class="minicards-bot">      
+                <p class="w-100 text-light">
+                    <span class="badge-sm">10</span>
+                    La pétanque devient un sport scolaire
+                </p>
+            </div>
+        </div>
+
+    </div>  
+    
+    <button class="w-100 d-flex flex-row justify-content-start align-items-center p-0 m-0 bg-black border-0 rounded-3" data-bs-toggle="modal" data-bs-target="#variants">
+        <img src="/p3-ico-question.svg" class="m-3" height="32px" alt="point d'interrogation - acces au contenu masqué">                  
+        <div class="text-light h-100 ff-flood">Les variantes du jeu </div>          
+    </button>
+
+
+    <!--********************************* La pratique sportive **********************************-->
+
+    <!-- Carousel pour mobile -->
+
+    <div class="position-relative p-0 m-0 w-100">
+    <h2 class="section-title w-100 text-start mt-3">La pratique sportive</h2>
+    <div class="anchor h-0 w-100" id="pratique" ></div>
     </div>
-    <div class="carousel-item">
-      <div class="card" >         
-        <h2 class="card-theme title w-100 text-center"> Local </h2>
-          <div class="content">
-            <div class="grey-stripe-top"></div>
-            <div class="card-header border-0 top-0 p-2 m-0">
-              <div><span class="main-info">1 adhérent sur 5</span> </div>
-              <div class="text-end">est une <span class="main-info">femme</span></div>
-            </div>
-            <div class="card-body h-100 d-flex flex-row justify-content-center align-items-center">
-              <img src="/p1-img-isidoro-ludivine.png" alt="panneau multidirectionnel">
-              <a href="" class="ff-nautigal fs-3 text-light position-absolute top-50 end-0 px-3 text-nowrap m-3" style="z-index:2;">Ludivine d'Isidoro</a>              
-            </div>
-            <div class="grey-stripe-bottom"></div>              
-            <div class="card-footer border-0 bottom-0 pb-2 text-end">
-              <span class="fs-6"> Organismes de référence : </span>
-              <div class="fs-5">Ligue / Comité / Club</div>
+    <div class="d-sm-none carousel slide w-100" data-bs-ride="carousel">
+    <div class="carousel-inner w-100">
+
+        <div class="carousel-item active">
+        <div class="card" >    
+            <h3 class="card-theme title w-100 text-center"> International </h3>
+            <div class="content">
+                <div class="grey-stripe-top"></div>
+                <div class="card-header border-0 top-0 p-2 m-0">
+                <span class="main-info">600 000 licenciés</span>
+                <div class="text-end">dans plus de <span class="main-info"> 100 pays</span></div>
+                </div>
+                <div class="card-body h-100 d-flex flex-row justify-content-center align-items-center">
+                <img src="/p1-img-directions.png" alt="panneau multidirectionnel - illustration catégorie internationale">
+                </div>
+                <div class="grey-stripe-bottom"></div>              
+                <div class="card-footer bottom-0 pb-2 text-end">
+                <span class="fs-6"> Organismes de référence : </span>
+                <div class="fs-5">FIPJP / CEP</div>
+                </div>
+            </div>     
+        </div>
+        </div>
+
+        <div class="carousel-item">
+        <div class="card" >         
+            <h3 class="card-theme title w-100 text-center"> National </h3>
+            <div class="content">
+                <div class="grey-stripe-top"></div>
+                <div class="card-header border-0 top-0 p-2 m-0">
+                <div><span class="main-info text-start">11 <sup>ème</sup> sport</div> 
+                <div class="text-end"> avec quelques <span class="main-info">6000 clubs</span></div>
+                </div>
+                <div class="card-body h-100 d-flex flex-row justify-content-center align-items-center">
+                <img src="/p1-img-france.png" alt="Carte de france - illustration catégorie nationale">
+                </div>
+                <div class="grey-stripe-bottom"></div>              
+                <div class="card-footer border-0 bottom-0 pb-2 text-end">
+                <span class="fs-6"> Organisme de référence : </span>
+                <div class="fs-5">FFPJP</div>
+                </div>
+            </div>    
+        </div>
+        </div>
+
+        <div class="carousel-item">
+        <div class="card" >         
+            <h3 class="card-theme title w-100 text-center"> Local </h3>
+            <div class="content">
+                <div class="grey-stripe-top"></div>
+                <div class="card-header border-0 top-0 p-2 m-0">
+                <div><span class="main-info">1 adhérent sur 5</span> </div>
+                <div class="text-end">est une <span class="main-info">femme</span></div>
+                </div>
+                <div class="card-body h-100 d-flex flex-row justify-content-center align-items-center">
+                <img src="/p1-img-isidoro-ludivine.png" alt="joueuse de pétanque en action de tir - illustration catégorie locale">
+                <a href="#li-portrait" class="d-none signature position-absolute top-50 end-0">Ludivine d'Isidoro</a>              
+                </div>
+                <div class="grey-stripe-bottom"></div>              
+                <div class="card-footer border-0 bottom-0 pb-2 text-end">
+                <span class="fs-6"> Organismes de référence : </span>
+                <div class="fs-5">Ligue / Comité / Club</div>
+                </div>  
+            </div>  
+        </div>
+        </div>
+        
+    </div>
+
+    <button class="carousel-control-prev" type="button" 
+            data-bs-target="#carouselExampleControls" 
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" 
+            data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+
+    </div>
+
+    <!-- groupe de cartes pour tablette et au delà -->
+
+    <div class="d-none d-sm-flex row gap-3 w-100">  
+
+        <div class="col card" >         
+            <h3 class="card-theme title w-100 text-center"> International </h3>
+            <div class="w-100 h-100 overflow-hidden p-1">
+            <div class="content">
+                <div class="grey-stripe-top"></div>
+                <div class="card-header border-0 top-0 p-2 m-0">
+                <span class="main-info">600 000 licenciés</span>
+                <div class="text-end">dans plus de <span class="main-info">100 pays</span></div>
+                </div>
+                <div class="card-body h-100 d-flex flex-row justify-content-center align-items-center">
+                <img src="/p1-img-directions.png" alt="panneau multidirectionnel - illustration catégorie internationale">
+                </div>
+                <div class="grey-stripe-bottom"></div>              
+                <div class="card-footer bottom-0 pb-2 text-end">
+                <span class="fs-6"> Organismes de référence : </span>
+                <div class="fs-5">FIPJP / CEP</div>
+                </div>
+                <div class="blue-stripe-top"></div>
+                <div class="blue-stripe-bottom"></div>  
+            </div>   
             </div>  
         </div>  
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
-<div class="d-none d-sm-flex row gap-3 w-100">  
-
-      <div class="col card" >         
-        <h2 class="card-theme title w-100 text-center"> International </h2>
-        <div class="w-100 h-100 overflow-hidden p-1">
-          <div class="content">
-            <div class="grey-stripe-top"></div>
-            <div class="card-header border-0 top-0 p-2 m-0">
-              <span class="main-info">600 000 licenciés</span>
-              <div class="text-end">dans plus de <span class="main-info">100 pays</span></div>
+        <div class="col card" >         
+            <h3 class="card-theme title w-100 text-center"> National </h3>
+            <div class="w-100 h-100 overflow-hidden p-1">
+            <div class="content">
+                <div class="grey-stripe-top"></div>
+                <div class="card-header border-0 top-0 p-2 m-0">
+                <div><span class="main-info text-start">11 <sup>ème</sup> sport</span>&nbsp; le plus pratiqué</div> 
+                <div class="text-end"> avec quelques <span class="main-info">6000 clubs</span></div>
+                </div>
+                <div class="card-body h-100 d-flex flex-row justify-content-center align-items-center">
+                <img src="/p1-img-france.png" alt="Carte de france - illustration catégorie nationale">
+                </div>
+                <div class="grey-stripe-bottom"></div>              
+                <div class="card-footer border-0 bottom-0 pb-2 text-end">
+                <span class="fs-6"> Organisme de référence : </span>
+                <div class="fs-5">FFPJP</div>
+                </div>
+                <div class="blue-stripe-top"></div>
+                <div class="blue-stripe-bottom"></div> 
             </div>
-            <div class="card-body h-100 d-flex flex-row justify-content-center align-items-center">
-              <img src="/p1-img-directions.png" alt="panneau multidirectionnel">
-            </div>
-            <div class="grey-stripe-bottom"></div>              
-            <div class="card-footer bottom-0 pb-2 text-end">
-              <span class="fs-6"> Organismes de référence : </span>
-              <div class="fs-5">FIPJP / CEP</div>
-            </div>
-            <div class="blue-stripe-top"></div>
-            <div class="blue-stripe-bottom"></div>  
-          </div>   
-        </div>  
-      </div>
-  
-
-      <div class="col card" >         
-        <h2 class="card-theme title w-100 text-center"> National </h2>
-        <div class="w-100 h-100 overflow-hidden p-1">
-          <div class="content">
-            <div class="grey-stripe-top"></div>
-            <div class="card-header border-0 top-0 p-2 m-0">
-              <div><span class="main-info text-start">11 <sup>ème</sup> sport</span>&nbsp; le plus pratiqué</div> 
-              <div class="text-end"> avec quelques <span class="main-info">6000 clubs</span></div>
-            </div>
-            <div class="card-body h-100 d-flex flex-row justify-content-center align-items-center">
-              <img src="/p1-img-france.png" alt="panneau multidirectionnel">
-            </div>
-            <div class="grey-stripe-bottom"></div>              
-            <div class="card-footer border-0 bottom-0 pb-2 text-end">
-              <span class="fs-6"> Organisme de référence : </span>
-              <div class="fs-5">FFPJP</div>
-            </div>
-            <div class="blue-stripe-top"></div>
-            <div class="blue-stripe-bottom"></div> 
-          </div>
-        </div>        
-      </div>
-
-      <div class="col card" >         
-        <h2 class="card-theme title w-100 text-center"> Local </h2>
-        <div class="w-100 h-100 overflow-hidden p-1">
-          <div class="content">
-            <div class="grey-stripe-top"></div>
-            <div class="card-header border-0 top-0 p-2 m-0">
-              <div><span class="main-info">1 adhérent sur 5</span> </div>
-              <div class="text-end">est une <span class="main-info">femme</span></div>
-            </div>
-            <div class="card-body h-100 d-flex flex-row justify-content-center align-items-center">
-              <img src="/p1-img-isidoro-ludivine.png" alt="panneau multidirectionnel">
-              <a href="" class="ff-nautigal fs-3 text-light position-absolute top-50 end-0 px-3 text-nowrap m-3" style="z-index:10;">Ludivine d'Isidoro</a>
-            </div>
-            <div class="grey-stripe-bottom"></div>              
-            <div class="card-footer border-0 bottom-0 pb-2 text-end">
-              <span class="fs-6"> Organismes de référence : </span>
-              <div class="fs-5">Ligue / Comité / Club</div>
-            </div>
-            <div class="blue-stripe-top"></div>
-            <div class="blue-stripe-bottom"></div>   
-          </div>      
+            </div>        
         </div>
-      </div>
+
+        <div class="col card" >         
+            <h3 class="card-theme title w-100 text-center"> Local </h3>
+            <div class="w-100 h-100 overflow-hidden p-1">
+            <div class="content">
+                <div class="grey-stripe-top"></div>
+                <div class="card-header border-0 top-0 p-2 m-0">
+                <div><span class="main-info">1 adhérent sur 5</span> </div>
+                <div class="text-end">est une <span class="main-info">femme</span></div>
+                </div>
+                <div class="card-body h-100 d-flex flex-row justify-content-center align-items-center">
+                <img src="/p1-img-isidoro-ludivine.png" alt="joueuse de pétanque en action de tir - illustration catégorie locale">
+                <a href="#li-portrait" data-bs-toggle="collapse" class="signature position-absolute top-50 end-0">Ludivine d'Isidoro</a>
+                </div>
+                <div class="grey-stripe-bottom"></div>              
+                <div class="card-footer border-0 bottom-0 pb-2 text-end">
+                <span class="fs-6"> Organismes de référence : </span>
+                <div class="fs-5">Ligue / Comité / Club</div>
+                </div>
+                <div class="blue-stripe-top"></div>
+                <div class="blue-stripe-bottom"></div>  
+            </div>      
+            </div>
+
+                <!--fenêtre masquée qui est découverte par click sur signature-->
+                <div class="hidden-explanation">
+                <div class="collapse " id="li-portrait">
+                    <div class="bg-dark p-3 border border-light rounded w-100">       
+                        <p class="fw-bold" style="color:var(--main-color);">Ludivine d'Isidoro</p>
+                        <p class="text-primary fw-bold">Tireuse</p>
+                        <p  class="text-light" >Date de naissance: 5 février 1987</p>
+                        <table class="table table-dark fs-6 fw-normal" style="width:100%;">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Competition</th>
+                                    <th scope="col">or</th>
+                                    <th scope="col">arg.</th>
+                                    <th scope="col">bro.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Chp du monde</th>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Jeux mondiaux</th>
+                                    <td>1</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Coupe des confédérations</th>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Chp d'Europe</th>
+                                    <td>2</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Chp de France</th>
+                                    <td>6</td>
+                                    <td>1</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="btn-outline-primary w-100 bg-dark rounded-3"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#li-portrait" 
+                        >Close</button>
+                    </div>
+                </div>
+            </div>        
+
+        </div>
+        </div>
     </div>
-</div>
 
-<p class="text-light d-none d-sm-block">Une association ou un club de sport a tout intérêt à s’affilier à une fédération sportive. 
-  Il s’agit en effet d’une démarche indispensable pour les associations et clubs qui souhaitent 
-  participer à des compétitions (championnat, tournoi…). D’ailleurs, en cas de victoire, 
-  c’est l’assurance d’une reconnaissance de son titre de champion. Mais, 
-  c’est également l’occasion de bénéficier d’un réseau plus élargi. 
-  De fait, les structures affiliées peuvent mettre en commun leurs connaissances, 
-  contacts et matériels pour obtenir de meilleurs résultats. Cette mutualisation 
-  permet en plus d’accélérer le partage de compétences, l’échange de bonnes pratiques 
-  et d’expérience ainsi que l’émergence de projets collectifs entre les différents clubs.</p>
-  
-  <p class="text-light d-none d-sm-block">Les fédérations sportives constituent en outre des alliés de taille pour leurs clubs affiliés. 
-  Au-delà de la délivrance de licences, elles soutiennent et accompagnent les dirigeants des clubs 
-  et associations dans l’accomplissement de leurs missions. Cela, en mettant à leur disposition un 
-  centre de documentation, un service juridique, des formations… Comme mentionné plus haut, 
-  elles endossent aussi le rôle de porte-parole auprès des pouvoirs publics 
-  (en particulier les décideurs politiques, ministères et parlementaires). 
-  Effectivement, elles plaident pour une meilleure prise en considération des besoins 
-  et intérêts des clubs. Notamment en ce qui concerne la signature des contrats et conventions.</p>
+    <button class="w-100 d-flex flex-row justify-content-start align-items-center p-0 m-0 bg-black border-0 rounded-3" data-bs-toggle="modal" data-bs-target="#fed-roles">
+        <img src="/p3-ico-question.svg" class="m-3" height="32px" alt="point d'interrogation - accès au contenu masqué">                  
+        <div class="text-light h-100 ff-flood">Rôles des organismes</div>          
+    </button>
 
-<div class="w-100 d-flex flex-row justify-content-start align-items-center p-0 m-0" data-bs-toggle="modal" data-bs-target="#explanations">
-    <img src="/p3-ico-question.svg" class="m-3" height="32px">                  
-    <div class="text-light h-100 ff-flood">Rôles des organismes</div>          
-</div>
-
-<!-- Modal -->
-<div class="modal" id="explanations" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog fixed-bottom" role="document">
-    <div class="modal-content bg-dark">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h2>Fédération - Roles principaux</h2>
-        <ul class="text-light">
-          <li>Organisation des compétitions sportives et délivrance des titres (nationaux, régionaux…)</li>
-          <li>Composition des sélections nationales</li>
-          <li>Établissement d’une charte d’éthique et de déontologie</li>
-          <li>Mise en place des règles et règlements inhérents au secteur du sport (techniques, sanctions…)</li>
-        </ul>
-        <h2>Association, comité, club - Roles principaux</h2>
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
-      </div>
+    <!-- Modal concernant les variantes de jeu de boules-->
+    <div class="modal" id="variants" tabindex="-1" role="dialog" aria-labelledby="Variantes du jeu de boules" aria-hidden="true">
+    <div class="modal-dialog fixed-bottom" role="document">
+        <div class="modal-content bg-dark">
+        <div class="modal-header">
+            <h2 class="modal-title main-info" id="exampleModalLongTitle">Variantes du jeu de boules</h2>
+        </div>
+        <div class="modal-body text-light overflow-auto" style="max-height:50vh;">
+            <h3 class="text-light fs-5">La branche principale : </h3>
+            <span style="color:var(--main-color); font-weight:bold;">Boule lyonnaise >> jeu provençal >> pétanque </span> <br>
+            Cela a permis de rendre plus accessible la discipline : terrain plus court, boules plus légères, règles simplifiées. <br>
+            En compétition : la pétanque reste un jeu d'adresse exigeant sur les plans mental et physique.
+            <hr>
+            <h3 class="text-light fs-5">Quelques variantes régionales : </h3>
+            <dl>
+            <dt>Boule de Sable :</dt>
+            <dd>
+            Pratiquée, à l'origine, au bord de la Loire par les mariniers qui s’arrêtaient pour jouer sur les bancs de sable avec des boules en bois munies d’un trou pour le lancer. 
+            </dd>
+            <dt>Boule bretonne :</dt>
+            <dd>
+            Se joue dans l’herbe ou sur <quote>'une aire de battage' ( * )</quote> avec des boules en résine lestées par un plomb. Cela déplace significativement le centre de gravité de ces dernières
+            qui adoptent des trajectoires courbes.
+            </dd> 
+            <dd class="text-muted">( * ) surface sèche ou le grain est séparé de la paille par battage</dd>
+            </dl>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
     </div>
-  </div>
-</div>
-
-<div class="position-relative p-0 m-0 w-100">
-  <h2 class="section-title w-100 text-start my-3">Promotion de la discipline</h2>
-  <div class="anchor h-0 w-100" id="end" ></div>
-</div>
-
-<article class="w-100 mt-0">
-  
-<div class="card w-100 border border-light p-0 h-25 mt-0" >
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <span class="position-absolute left-0 top-0 m-1 ff-stencil">2015</span>
-      <img src="/p1-img-educnaute.jpg" >
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h3 class="card-title title">Un sport scolaire</h3>
-        <h4 class="fs-5 text-warning">convention entre la FFPJP et le ministère de l'éducation nationale et des sports</h4>
-        <p class="card-text">La pétanque peut désormais être enseignée pendant les heures d'éducation physique et sportive.
-          A partir de la sixième, des enseignants brevetés de la FFPJP peuvent apporter leur soutien technique dans les collèges et lycées.
-        </p>
-        <p class="card-text"><small class="text-muted">De gauche à droite : Thierry Braillard, secrétaire d'Etat aux sports, Alain Cantarutti Président FFPJP, Najav Vallaud-Belkacem ministre de l'Education nationale et Lucette Coste, référente USEP de la FFPJP.</small></p>
-      </div>
+
+    <!-- Modal concernant le rôle des organismes fédérateurs-->
+    <div class="modal" id="fed-roles" tabindex="-1" role="dialog" aria-labelledby="Rôles de la fédération" aria-hidden="true">
+    <div class="modal-dialog fixed-bottom" role="document">
+        <div class="modal-content bg-dark">
+        <div class="modal-header">
+            <h2 class="modal-title main-info" id="exampleModalLongTitle">Rôle de la fédération</h2>
+        </div>
+        <div class="modal-body overflow-auto" style="max-height:50vh;">
+            <h3 class="text-light fs-5">Action de soutien :</h3>
+            <p class="text-light ">Les fédérations sportives soutiennent et accompagnent les dirigeants des clubs 
+            et associations dans l’accomplissement de leurs missions. Elles mettent à leur disposition un 
+            centre de documentation, un service juridique, des formations… Elles endossent aussi le rôle de porte-parole auprès des pouvoirs publics 
+            (en particulier les décideurs politiques, ministères et parlementaires) pour une meilleure prise en considération des besoins 
+            et intérêts des clubs.
+            </p>
+            <hr>
+            <h3 class="text-light fs-5">Attributions principales : </h3>
+            <ul class="text-light">
+            <li>Organisation des compétitions sportives et délivrance des titres (nationaux, régionaux…)</li>
+            <li>Composition des sélections nationales</li>
+            <li>Établissement d’une charte d’éthique et de déontologie</li>
+            <li>Mise en place des règles et règlements inhérents au secteur du sport (techniques, sanctions…)</li>
+            </ul>        
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
     </div>
-  </div>
-</div>
-
-<div class="h-100 w-100 collapse" id="full-screen">
-<img src="./p1-img-ptour-limoges.jpg" class="ptour-img">
-<button type="button" class="btn btn-primary w-100 position-fixed bottom-0 end-0" data-bs-toggle="collapse" data-bs-target="#full-screen" style="z-index:30">Réduire</button>
-</div>
-
-<div class="card w-100 border border-light p-0 h-25">
-  <div class="row no-gutters">
-    <div class="col-md-4 position-relative">
-      <span class="position-absolute left-0 top-0 m-1 ff-stencil text-dark">2022</span>
-      <img src="./p1-img-ptour-limoges.jpg" class="">
-      <button data-bs-toggle="collapse" data-bs-target="#full-screen" class="bg-black position-absolute ms-3 rounded-3 d-sm-none" style="z-index:5; bottom:-16px; left:0; border:none;"><img src="./p1-ico-binoculars.svg" height="32px"></button>
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h3 class="card-title title">Le pétanque tour</h3>
-        <h4 class="fs-5 text-warning">la F.F.P.J.P. part à la rencontre du grand public</h4>
-        <p class="card-text">Depuis 2012, la Fédération Française de Pétanque et de Jeu Provençal organise le « Pétanque Tour », tournée nationale de promotion des sports Pétanque et Jeu Provençal. 
-          En s'appuyant sur des champions du monde, masculins et féminins, la F.F.P.J.P. part à la rencontre du grand public, avec des animations gratuites et un accueil du public adapté.
-        </p>
-        <p class="card-text"><small class="text-muted">Etape de Limoges du 7 au 8 juin 2022 </small></p>
-      </div>
+
+    <div class="position-relative p-0 m-0 w-100">
+    <h2 class="section-title w-100 text-start my-3">Promotion de la discipline</h2>
+    <div class="anchor h-0 w-100" id="end" ></div>
     </div>
-  </div>
-</div>
-</article>
 
-<div class="saut-page" style="height:20rem;"></div>
+    <article class="w-100 mt-0">
+    
+        <div class="card w-100 border border-light p-0 h-25 mt-0" >
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                <span class="position-absolute left-0 top-0 m-1 ff-stencil">2015</span>
+                <img src="/p1-img-educnaute.jpg" alt="photo de groupe prise en 2015 - 
+                Madame Najav Vallaud-Belkacem, ministre de l'Education nationale, est entourée de 2 responsables de la Fédération de pétanque">
+                </div>
+                <div class="col-md-8">
+                <div class="card-body">
+                    <h3 class="card-title title">Un sport scolaire</h3>
+                    <h4 class="fs-5 text-warning">convention entre la FFPJP et le ministère de l'éducation nationale et des sports</h4>
+                    <p class="card-text">La pétanque peut désormais être enseignée pendant les heures d'éducation physique et sportive.
+                    A partir de la sixième, des enseignants brevetés de la FFPJP peuvent apporter leur soutien technique dans les collèges et lycées.
+                    </p>
+                    <p class="card-text"><small class="text-muted">De gauche à droite : Thierry Braillard, secrétaire d'Etat aux sports, Alain Cantarutti Président FFPJP, Najav Vallaud-Belkacem ministre de l'Education nationale et Lucette Coste, référente USEP de la FFPJP.</small></p>
+                </div>
+                </div>
+            </div>
+        </div>
 
-<footer class="border border-light" style="position:absolute; bottom:0; width:100vw; border-radius:2rem;">
-  <a class="row btn menu-btn m-0 p-0" href="https://www.petanquefrancaise.com/" target="blank">le site PPF</a>
-  <img src="./p1-img-croft.png" class="w-100 d-sm-none">  
-  <a class="row btn menu-btn m-0 p-0" href="https://www.123petanque.com/Clubs" target="blank">Trouver un club</a>
+        <div class="h-100 w-100 collapse" id="full-screen">
+            <img src="./p1-img-ptour-limoges.jpg" class="ptour-img" alt="photo embrassant l'ensemble du stand et des aires d'entrainement de la FFPJP lors de l'étape de Limoges en 2022">
+            <button type="button" 
+                class="fullscreen-exit btn btn-primary" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#full-screen">
+                <img src="./p1-ico-fullscreen-exit.svg" height="16px" alt="symbole de sortie du mode plein ecran">
+            </button>
+        </div>
+
+        <div class="card w-100 border border-light p-0 h-25">
+            <div class="row no-gutters">
+                <div class="col-md-4 position-relative">
+                <span class="position-absolute left-0 top-0 m-1 ff-stencil text-dark">2022</span>
+                <img src="./p1-img-ptour-limoges.jpg" alt="photo embrassant l'ensemble du stand et des aires d'entrainement de la FFPJP lors de l'étape de Limoges en 2022">
+                <button data-bs-toggle="collapse" data-bs-target="#full-screen" 
+                class="w-100 p-1 bg-dark border border-dark d-sm-none d-flex align-items-center justify-content-center">
+                <img src="./p1-ico-fullscreen.svg" height="16px" alt="symbole d'entrée en mode plein ecran"></button>
+                </div>
+
+                <div class="col-md-8">
+                <div class="card-body">
+                    <h3 class="card-title title">Le pétanque tour</h3>
+                    <h4 class="fs-5 text-warning">la F.F.P.J.P. part à la rencontre du grand public</h4>
+                    <p class="card-text">Depuis 2012, la Fédération Française de Pétanque et de Jeu Provençal organise le « Pétanque Tour », tournée nationale de promotion des sports Pétanque et Jeu Provençal. 
+                    En s'appuyant sur des champions du monde, masculins et féminins, la F.F.P.J.P. part à la rencontre du grand public, avec des animations gratuites et un accueil du public adapté.
+                    </p>
+                    <p class="card-text"><small class="text-muted">Etape de Limoges du 7 au 8 juin 2022 </small></p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+</main>
+
+<!--*************************************** Pied de page ****************************************-->
+
+<footer>
+  <div class="footer-title">Poursuivre ses recherches . . .</div>
+  <a class="external-link" href="https://www.ffpjp.org/" target="blank">le site FFPJP</a>
+  <a class="external-link" href="https://www.123petanque.com/Clubs" target="blank">Trouver un club</a>
 </footer>
 
-    <!-- Bootstrap script bundle from Content Delivery Network -->
-    <script 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
-    crossorigin="anonymous">
-    </script>
+<!--******************* Bootstrap script bundle from Content Delivery Network *******************-->
+<script 
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+  crossorigin="anonymous">
+</script>
+
 </body>
 </html>

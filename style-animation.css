@@ -1,3 +1,5 @@
+/* Page 1 - Animation du paragraphe origines */
+
 .para{
     position:absolute;
     line-height: 2rem;
@@ -96,8 +98,8 @@ animation-fill-mode: forwards;
 100%{
     width:100%
 }
-
 }
+
 .elapsed-time{  
 margin-top:2rem;
 display:flex;
@@ -121,4 +123,51 @@ width:80%;
 height:100%;
 margin:auto;
 border-radius:0.5rem;
+}
+
+/* Page 1 - Animation du panorama en full-screen */
+
+@keyframes panorama{
+    0%{left:0;
+    }
+    50%{
+      left:(-89vh + 50vw);
+    }
+    100%{
+      left:calc(-178vh + 100vw);    
+    }
+  }
+  
+.ptour-img{
+    position:fixed;
+    bottom:0;
+    height:100vh;
+    animation-name:"panorama";
+    animation-duration: 20s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function:  linear;
+    animation-fill-mode: forwards;
+}
+
+/* Page 2 - Animation du bandeau publicitaire */
+
+@keyframes stripe-move{
+    0%{
+        left:-26rem;
+    }
+    50%{
+        left:-13rem;
+    }
+    100%{
+        left:0;
+    }    
+}
+
+.logo-stripe{
+    animation-name:"stripe-move";
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-duration: 5s;
 }

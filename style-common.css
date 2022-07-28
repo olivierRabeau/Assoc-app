@@ -1,0 +1,297 @@
+/*------------------------------------------- balises html ---------------------------------------*/
+
+body{
+    position:relative;
+    min-width:320px;
+    min-height:100vh;   
+    background-color:var(--bg-color);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    gap:0;
+    padding:0;
+    padding-top:5rem;
+    caret-color: transparent;
+}
+
+header{
+    position:fixed;
+    top:0;
+    height:var(--header-height);
+    width:100vw;
+    display:flex;
+    align-items: center;
+}
+
+footer{
+    position:relative;
+    top:6rem;
+    width:100vw;
+    background-color:black;
+}
+
+th, td {
+    margin:0 !important;
+    padding:0.2rem !important;
+    text-align:center !important;
+}
+
+dt{
+    color:var(--main-color);
+}
+
+/*------------------------------------------- classes --------------------------------------------*/
+
+/* Scrollspy associé à body */
+
+.anchor{
+    position:absolute; 
+    top:var(--anchor-offset);
+    width:100%;
+    height:0;
+}
+
+.list-group-item-action{
+    display:none;
+  }
+  
+.list-group{
+  bottom:3rem;
+  border:none;
+}
+
+.list-group-item-action.active{
+    display: block;
+    border:none;
+}
+
+/* titres et informations principales */
+
+.catchphrase{
+   height:calc(100vh - ((100vw * 0.43) + 8rem)); 
+   min-height:2rem; width:100vw; 
+   color:white; display:flex; 
+   flex-direction:column; 
+   justify-content:center; 
+   align-items:center; 
+   font-size:1.3rem;
+}
+
+.main-title{
+    color:var(--main-color);
+    background:black;
+    border-bottom: 1px solid grey;
+    font-family:'stencil', Arial, Helvetica, sans-serif;
+    font-size:2.2rem;
+    line-height:4rem;
+    width:100%;
+    padding-left:1rem;
+}
+
+.section-title{
+    color:white;
+    font-family:'stencil', Arial, Helvetica, sans-serif;;
+    font-size:1.5rem;
+}
+
+.title{
+    border-radius:1rem;
+    color:var(--title-color);
+    font-family: 'flood', Arial, Helvetica, sans-serif;
+    font-size:1.5rem;
+    margin:0.5rem;
+    margin-bottom:1rem;
+}
+
+.footer-title{
+    font-family: 'flood', Arial, Helvetica, sans-serif;
+    font-size:1.2rem;
+    color:var(--main-color);
+    text-align: center;
+}
+
+.main-info{
+    color:var(--main-color);
+    font-family: 'flood', Arial, Helvetica, sans-serif;
+    font-size:1.2rem;
+}
+
+.signature{
+    color:white;
+    font-family:'nautigal', Arial, Helvetica, sans-serif;
+    font-size:1.7rem;
+    white-space:nowrap;
+    padding: 0 1rem 0 1rem;
+    margin:1rem;
+}
+
+.signature:hover{
+    color:white;
+}
+
+.hidden-explanation{
+    position:absolute;
+    width:100%;
+    bottom:0;
+}
+
+.fullscreen-exit {
+    width:100%;
+    position:fixed;
+    bottom:0;
+    right:0;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    border-radius:0;
+}
+
+.external-link{
+    display:block;
+    text-decoration:none;
+    background-color:black;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    text-align:center;
+    line-height:2.5rem;
+    border-top:1px solid #585858;
+}
+
+.external-link:hover{
+    color:white;
+}
+
+
+/*------------------------------------------ navigation ------------------------------------------*/
+
+nav a{
+    background:black;
+    padding:0.5rem;
+}
+
+nav a:hover{
+    color:white !important;
+}
+
+nav img{  
+    height:2rem;
+    margin:0.5rem;
+}
+
+nav h4{
+    font-size:0.8rem;
+}
+
+nav button{
+    background:none;
+}
+
+nav{
+    background:black;
+}
+
+.nav-link{
+    color:white;
+    text-decoration:none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+nav>div{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    justify-content: start;
+    
+}
+
+.menu-btn{
+    background-color:var(--main-color);
+    border-radius:none;
+    color:white;
+    font-family: 'flood', Arial, Helvetica, sans-serif;
+    font-size:1.5rem;
+    width:100%;
+}
+
+/*--------------------------------------------- Page ---------------------------------------------*/
+
+/* tête de page */ 
+
+.page-label{
+    position:absolute;
+    background:black;
+    font-size:1rem;
+    font-family:flood;
+    border-radius:1rem;
+    left:2rem; 
+    padding-left:0.2rem; 
+    padding-right:0.2rem; 
+    top:3.3rem; 
+    color:grey;
+ }
+
+.header-icon {
+    height:3rem;
+} 
+
+.menu-icon{
+    height:40px;
+    width:40px;
+}
+
+/* contenu de la page */
+
+.card-icon{
+    height:3rem;
+    width:auto;
+}
+
+.card-header{
+    width:100%;
+    border-bottom:1px solid black;
+}
+
+.card-image{
+    margin:0;
+    padding:0;
+    width:100%;
+    background:black;
+}
+
+.bg-image{
+    max-width:98vw;
+    height:auto;
+    margin-top:auto;
+}
+
+.bottom{
+    position:fixed;
+    width:100vw;
+    bottom:0;
+}
+
+.menu-icon{
+    height:3rem;
+    width:auto;
+}
+
+.nav-link.active{
+    color:var(--main-color);
+    text-decoration:underline;
+}
+
+.ovrflw-scrll{
+    max-height:180px;
+}
+
+.table{
+text-align: start;
+column-width: auto;
+}
+

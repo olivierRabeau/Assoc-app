@@ -1,11 +1,12 @@
 :root{
+    --index-title-color:#17FCFF;
     --bg-color:black;
     --main-color:orange; /*#FF00EE;*/
     --title-color:#00FF80;
     --menu-color:#AB00FF;
     --deco-color:#2000FF;
     --header-height:4rem;
-    --anchor-offset:-4rem;
+    --anchor-offset:-5rem;
     user-select: none;
 }
 

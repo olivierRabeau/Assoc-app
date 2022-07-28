@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Identifier son style de jeu et s'équiper">
-    <meta name="keywords" content="pétanque">
+    <meta name="description" content="Identifier son style de jeu et s'équiper pour débuter à la pétanque.">
 
     <!-- Bootstrap stylesheet from Content Delivery Network -->
     <link 
@@ -20,115 +19,88 @@
     <link rel="icon" type="image/png" href="/index-ico-favicon.png">
 
     <title>Style de jeu et équipement</title>
-    <style>
-    .grille .col{  
-
-    height:100vh;
-    background:blue;
-    opacity:0.2;
-    z-index:10;
-    }
-    .grille{
-        z-index:10;
-        margin:0;
-        padding:0;
-    }
-    th, td {
-        margin:0 !important;
-        padding:0.2rem !important;
-        text-align:center !important;
-    }
-
-    </style>
 </head>
 
 <body class="container position-relative" data-bs-spy="scroll" data-bs-target="#menu-icon-group" data-bs-offset="50">
 
-<!-- 
----------------------------------------------Outil de mise en page-----------------------------------
+<!--************************************** Navigation *******************************************-->
 
-    <div class="container grille row gap-2 position-fixed ">
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-    </div>
+<!-- pour mobiles et tablettes -->
 
--->  
-    
-<header data-bs-toggle="offcanvas" data-bs-target="#offcanvas-bottom">
-    <h1 class="main-title h-100 ps-3">PETANQUE <img src="/index-ico-bowl.png" class="header-icon"></h1>
-    <div class="page-stamp position-absolute bg-black ff-flood rounded-pill">équipement</div> 
-    <img class="menu-icon " src="/nav-ico-list.svg"  height="40px" width="40px">
-</header>  
-    
     <nav class="nav-bottom w-100">
-        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-bottom"><img src="/nav-ico-list.svg"  height="40px" width="40px"></button>
+        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-bottom"><img src="/nav-ico-list.svg"  height="40px" width="40px" alt="symbole hamburger - accès à la navigation masquée"></button>
         <div class="offcanvas offcanvas-bottom border-dark" tabindex="-1" id="offcanvas-bottom">
             <div class="nav-listlink" >
                 <a href="/p1--association.html" class="nav-link border-dark">
-                    <img src="/nav-ico-association.svg" class="nav-icon">
-                    <h4 class="nav-text">association</h4>
+                    <img src="/nav-ico-association.svg" class="nav-icon" alt="symbole groupe - accès à la page association">
+                    <div>association</div>
                 </a>
                 <a href="/p2--competition.html" class="nav-link border-dark me-auto">
-                    <img src="/nav-ico-calendar.svg" class="nav-icon">
-                    <h4 class="nav-text">événement</h4>
+                    <img src="/nav-ico-calendar.svg" class="nav-icon" alt="symbole calendrier - accès à la page événements">
+                    <div>événements</div>
                 </a>
             </div>
         </div>
     </nav>
+
+<!-- pour laptop et desktop -->
     
-    <nav class="nav-top" style="z-index:20;">
+    <nav class="nav-top">
         <div class="nav-listlink  d-flex flex-row" >
             <a href="/p1--association.html" class="nav-link border-dark">
-                <img src="/nav-ico-association.svg" class="nav-icon">
-                <h4 class="nav-text">association</h4>
+                <img src="/nav-ico-association.svg" class="nav-icon" alt="symbole groupe - accès à la page association">
+                <div>association</div>
             </a>
             <a href="/p2--competition.html" class="nav-link border-dark">
-                <img src="/nav-ico-calendar.svg" class="nav-icon">
-                <h4 class="nav-text">événement</h4>
+                <img src="/nav-ico-calendar.svg" class="nav-icon" alt="symbole calendrier - accès à la page événements">
+                <div>événements</div>
             </a>
         </div>
     </nav>
 
-    <main>
+<!--**************************************** Entête *********************************************-->
+    
+    <header data-bs-toggle="offcanvas" data-bs-target="#offcanvas-bottom">
+        <div class="main-title">PETANQUE <img src="/index-ico-bowl.png" class="header-icon"></div>
+        <h1 class="page-label">équipement</h1> 
+        <img class="menu-icon" src="/nav-ico-list.svg" alt="symbole hamburger - accès à la navigation masquée">
+    </header>  
+
+
+<!--********************************** Contenu de la page ***************************************-->
+    
+    <main class="w-100">
+
+<!--*********************************** Les styles de jeu ***************************************-->
+
+        <h2 class="section-title">Les styles de jeu</h2>
         <section class="row gap-2 p-2">
-            <h2 class="section-title">Les styles de jeu</h2>
+
             <div class="anchor d-lg-none" id="pointeuse"></div>
 
-            <article class="card col bg-dark align-items-start m-0 mb-3 p-0 text-light">    
+            <article class="card col-12 col-lg bg-dark align-items-start m-0 mb-3 p-0 text-light">  
                 <div class="card-header">
-                    <h3 class="title display-3 m-auto"><img class="card-icon" src="/p3-ico-accurate.svg"> Pointeuse</h3>          
+                    <h3 class="title display-3 m-auto"><img class="card-icon" src="/p3-ico-accurate.svg" alt="symbole cible - illustration catégorie pointeuse"> Pointeuse</h3>          
                 </div>
+
                 <div class="card-body">
                     <div class="p-2 row w-100">
-                        <h4 class="col col-lg-12 text-nowrap"><b>Marquer des points</b></h4>
-                        <h4 class="col text-nowrap"><b>S'adapter au terrain</b></h4>
+                        <span class="col col-lg-12 text-nowrap"><b>Marquer des points</b></span>
+                        <span class="col text-nowrap"><b>S'adapter au terrain</b></span>
                     </div> 
-                    <div class="row align-items-center position-relative">                         
-                        <div class="col-12 col-md-8 col-lg-12 position-relative top-0 mb-3">
+
+                    <div class="row align-items-center position-relative"> 
+                        <div class="col-12 col-md-7 col-lg-12 position-relative top-0 mb-3">
                             <div class="collapse position-absolute top-0 bg-dark video">
                                 <video width="98%" height="auto" autoplay loop muted>
                                     <source src="/p3-mov-accurate.mp4" type="video/mp4">    
                                 Votre navigateur ne permet pas de lire la vidéo.
                                 </video>         
-                            </div>
-                                       
-                            <img class="w-100" src="/p3-img-accurate.png">
-                            
-
-                            
+                            </div>                                       
+                            <img class="w-100" src="/p3-img-accurate.png" alt="Buste Anna Maillard - Championne de niveau international"> 
                         </div> 
 
-                        <div class="col p-0">
+                        <div class="col p-2">
                             <div class="row ">
                                 <div class="col-12 col-sm-6 col-md-12 col-xxl-6 text-nowrap">
                                     <h4>Qualités</h4>
@@ -150,9 +122,9 @@
                         </div>
 
                         <!-- fenêtre masquée qui est découverte par click sur bouton interrogation -->
-                        <div style="position:absolute; bottom:0; z-index:1;">
+                        <div class="hidden-explanation">
                             <div class="collapse " id="explanation-accurate">
-                                <div class="bg-dark p-3 border border-light rounded" style="width: 100%;">
+                                <div class="bg-dark p-3 border border-light rounded w-100">
                                     <dl>                                    
                                         <dt>Roulette :</dt>
                                         <dd>Faire rouler la boule jusqu’à l’objectif. 
@@ -179,9 +151,9 @@
                         </div>
 
                         <!-- fenêtre masquée qui est découverte par click sur signature -->
-                        <div style="position:absolute; bottom:0; z-index:1;">
+                        <div class="hidden-explanation">
                             <div class="collapse " id="am-portrait">
-                                <div class="bg-dark p-3 border border-light rounded" style="width: 100%;">       
+                                <div class="bg-dark p-3 border border-light rounded w-100">       
                                     <p class="fw-bold" style="color:var(--main-color);">Anna Maillard </p>
                                     <p class="text-primary fw-bold">Pointeuse ou milieu </p>
                                     <p>Date de naissance: 28 septembre 1997</p>
@@ -244,36 +216,38 @@
                     </div>           
                 </div>
 
-
                 <div class="d-flex justify-content-between justify-content-lg-start align-items-center w-100">
-                    <a href=".video" data-bs-toggle="collapse"><img src="/p3-ico-camera.svg" class="m-3" height="32px"></a>      
-                    <a href="#explanation-accurate" data-bs-toggle="collapse"><img src="/p3-ico-question.svg" class="m-3" height="32px"></a>
-                    <a href="#am-portrait" class="ff-nautigal fs-3 text-light ms-auto pe-3" data-bs-toggle="collapse" >Anna Maillard</a>                 
+                    <a href=".video" data-bs-toggle="collapse"><img src="/p3-ico-camera.svg" class="m-3" height="32px" alt="symbole camera - accès à la vidéo concernant Anna Maillard"></a>      
+                    <a href="#explanation-accurate" data-bs-toggle="collapse"><img src="/p3-ico-question.svg" class="m-3" height="32px" alt="point d'interrogation - accès à la définition des termes techniques"></a>
+                    <a href="#am-portrait" class="signature ms-auto" data-bs-toggle="collapse" >Anna Maillard</a>                 
                 </div>  
 
             </article>
 
             <div class="anchor d-lg-none" id="milieu"></div>
-            <article class="card col bg-dark align-items-start m-0 mb-3 p-0 text-light">    
+
+            <article class="card col-12 col-lg bg-dark align-items-start m-0 mb-3 p-0 text-light">    
                 <div class="card-header ">
-                    <h3 class="title display-3 m-auto"><img class="card-icon" src="/p3-ico-middle.svg"> Milieu</h3>          
+                    <h3 class="title display-3 m-auto"><img class="card-icon" src="/p3-ico-middle.svg" alt="symbole cerveau - illustration de la catégorie milieu"> Milieu</h3>          
                 </div>
+
                 <div class="card-body">
                     <div class="p-2 row w-100">
-                        <h4 class="col col-lg-12 text-nowrap"><b>Définir la stratégie</b></h4>
-                        <h4 class="col text-nowrap"><b>Veiller à la cohésion</b></h4>
+                        <span class="col col-lg-12 text-nowrap"><b>Définir la stratégie</b></span>
+                        <span class="col text-nowrap"><b>Veiller à la cohésion</b></span>
                     </div> 
+
                     <div class="row align-items-center position-relative">
-                        <div class="col-12 col-md-8 col-lg-12 position-relative top-0 mb-3">
+                        <div class="col-12 col-md-7 col-lg-12 position-relative top-0 mb-3">
                             <div class="collapse position-absolute top-0 bg-dark video">
                                 <video width="98%" height="auto" autoplay loop muted>
                                     <source src="/p3-mov-middle.mp4" type="video/mp4">    
                                     Votre navigateur ne permet pas de lire la vidéo.
                                 </video>         
                             </div> 
-                            <img class="w-100" src="/p3-img-middle.png">
+                            <img class="w-100" src="/p3-img-middle.png" alt="Buste Caroline Bourriaud - championne de niveau international">
                         </div> 
-                            <div class="col p-0">
+                            <div class="col p-2">
                                 <div class="row">
                                     <div class="col-12 col-sm-6 col-md-12 col-xxl-6 text-nowrap">
                                         <h4>Qualités</h4>
@@ -295,9 +269,9 @@
                             </div>
 
                         <!-- fenêtre masquée qui est découverte par click sur signature -->
-                        <div style="position:absolute; bottom:0; z-index:1;">
+                        <div class="hidden-explanation">
                             <div class="collapse " id="cb-portrait">
-                                <div class="bg-dark p-3 border border-light rounded" style="width: 100%;">       
+                                <div class="bg-dark p-3 border border-light rounded w-100">       
                                     <p class="fw-bold" style="color:var(--main-color);">Caroline Bourriaud</p>
                                     <p class="text-primary fw-bold">Tireuse ou milieu </p>
                                     <p>Date de naissance: 18 août 1998</p>
@@ -337,37 +311,42 @@
                                     >Close</button>
                                 </div>
                             </div>
-                        </div>
+                        </div>                        
                     </div>       
                 </div>
+
                 <div class="d-flex justify-content-between justify-content-lg-start align-items-center w-100">
-                    <a href=".video" class="d-flex justify-content-start align-items-center mt-2 w-100" data-bs-toggle="collapse"><img src="/p3-ico-camera.svg" class="mb-3 ms-3" height="32px"></a>        
-                    <a href="#cb-portrait" class="ff-nautigal fs-3 text-light ms-auto pe-3 text-nowrap" data-bs-toggle="collapse" >Caroline Bourriaud</a>
+                    <a href=".video" class="d-flex justify-content-start align-items-center mt-2 w-100" data-bs-toggle="collapse"><img src="/p3-ico-camera.svg" class="mb-3 ms-3" height="32px" alt="symbole camera - accès à la vidéo concernant Caroline Bourriaud"></a>        
+                    <a href="#cb-portrait" class="signature ms-auto" data-bs-toggle="collapse" >Caroline Bourriaud</a>
                 </div>
+
             </article>
 
             <div class="anchor d-lg-none" id="tireuse"></div>
-            <article class="card col bg-dark align-items-start m-0 mb-3 p-0 text-light">    
+
+            <article class="card col-12 col-lg bg-dark align-items-start m-0 mb-3 p-0 text-light">    
                 <div class="card-header">
-                    <h3 class="title display-3 m-auto"><img class="card-icon" src="/p3-ico-shooter.svg"> Tireuse</h3>          
+                    <h3 class="title display-3 m-auto"><img class="card-icon" src="/p3-ico-shooter.svg" alt="symbole point éclair - illustration catégorie tireuse"> Tireuse</h3>          
                 </div>
+
                 <div class="card-body">
                     <div class="p-2 row w-100">
-                        <h4 class="col col-lg-12 text-nowrap"><b>Faire des carreaux</b></h4>
-                        <h4 class="col text-nowrap"><b>Dégager le terrain</b></h4>
+                        <span class="col col-lg-12 text-nowrap"><b>Faire des carreaux</b></span>
+                        <span class="col text-nowrap"><b>Dégager le terrain</b></span>
                     </div> 
+
                     <div class="row align-items-center position-relative"> 
-                        <div class="col-12 col-md-8 col-lg-12 position-relative top-0 mb-3">
+                        <div class="col-12 col-md-7 col-lg-12 position-relative top-0 mb-3">
                             <div class="collapse position-absolute top-0 bg-dark video">
                                 <video width="98%" height="auto" autoplay loop muted>
                                     <source src="/p3-mov-shooter.mp4" type="video/mp4">    
                                 Votre navigateur ne permet pas de lire la vidéo.
                                 </video>         
                             </div> 
-                            <img class="w-100" src="/p3-img-shooter.png">
+                            <img class="w-100" src="/p3-img-shooter.png" alt="buste Céline Lebossé - championne de niveau international">
                         </div> 
 
-                        <div class="col p-0">
+                        <div class="col p-2">
                             <div class="row">
                                 <div class="col-12 col-sm-6 col-md-12 col-xxl-6 text-nowrap">
                                     <h4>Qualités</h4>
@@ -389,9 +368,9 @@
                         </div>
 
                         <!-- fenêtre masquée qui est découverte par click sur bouton interrogation -->
-                        <div style="position:absolute; bottom:0; z-index:1;">
+                        <div class="hidden-explanation">
                             <div class="collapse " id="explanation-shooter">
-                                <div class="bg-dark p-3 border border-light rounded" style="width: 100%;">
+                                <div class="bg-dark p-3 border border-light rounded w-100">
                                     <dl>                                    
                                         <dt>Tir « au fer » :</dt>
                                         <dd>Faire retomber sa boule directement sur la boule adverse</dd>
@@ -413,9 +392,9 @@
                         </div>
                         
                         <!--fenêtre masquée qui est découverte par click sur signature-->
-                        <div style="position:absolute; bottom:0; z-index:1;">
+                        <div class="hidden-explanation">
                             <div class="collapse " id="cl-portrait">
-                                <div class="bg-dark p-3 border border-light rounded" style="width: 100%;">       
+                                <div class="bg-dark p-3 border border-light rounded w-100">       
                                     <p class="fw-bold" style="color:var(--main-color);">Céline Lebossé</p>
                                     <p class="text-primary fw-bold">Tireuse</p>
                                     <p>Date de naissance: 05 juillet 1998</p>
@@ -452,25 +431,25 @@
                 </div>
 
                 <div class="d-flex justify-content-between justify-content-lg-start align-items-center w-100">
-                    <a href=".video" data-bs-toggle="collapse"><img src="/p3-ico-camera.svg" class="m-3" height="32px"></a>          
-                    <a href="#explanation-shooter" data-bs-toggle="collapse"><img src="/p3-ico-question.svg" class="m-3" height="32px"></a>  
-                    <a href="#cl-portrait" class="ff-nautigal fs-3 text-light ms-auto pe-3" data-bs-toggle="collapse">Céline Lebossé</a>      
+                    <a href=".video" data-bs-toggle="collapse"><img src="/p3-ico-camera.svg" class="m-3" height="32px" alt="symbole camera - accès à la vidéo concernant Céline Lebossé"></a>          
+                    <a href="#explanation-shooter" data-bs-toggle="collapse"><img src="/p3-ico-question.svg" class="m-3" height="32px" alt="point d'interrogation - accès à la définition des termes techniques"></a>  
+                    <a href="#cl-portrait" class="signature ms-auto" data-bs-toggle="collapse">Céline Lebossé</a>      
                 </div>  
 
             </article>
-
         </section>
+
+<!--*************************************** Les boules ******************************************-->            
+
         <section class="row w-100 mx-auto p-0 position-relative align-items-start text-light">
-            <h2 class="section-title">Les boules</h2>             
+
+            <h2 class="section-title">Les boules</h2>  
+
             <div class="col-12 col-xxl-6">
                 <article class="row justify-content-around p-0">
-                    <h2 class="title">Conception</h2>
-                    <div class="col-12 col-md-6 
-                    d-flex flex-column 
-                    align-items-start 
-                    justify-content-start
-                    mt-3">
-                    
+                    <h3 class="title">Conception</h3>
+
+                    <div class="col-12 col-md-6 d-flex flex-column align-items-start justify-content-start mt-3">                    
                         <h4><b>Confort de jeu, sensations</b></h4>
                         <ul>
                             <li>Matériaux -> touché, entretien</li>
@@ -497,8 +476,9 @@
                             <li>fraisage (profond) </li>
                         </ul>        
                     </div>
+
                     <div class="col-12 col-md-6 mt-3 p-3 d-flex flex-column gap-1"> 
-                        <div class="position-relative mb-auto"> 
+                        <div class="position-relative mb-auto">
                             <div id="look-inside" class="collapse">                         
                                 <video class="bg-black position-absolute top-0 left-0 border border-light rounded w-100" autoplay loop muted >
                                     <source src="/p3-mov-newborn.mp4 " type="video/mp4">    
@@ -506,24 +486,25 @@
                                 </video>
                                 <div class="d-flex flex-row justify-content-center">
                                     <div class="position-absolute bg-black w-100 opacity-50" style="height:2rem;"></div>
-                                    <h3 class="position-absolute h5 ms-3 mt-1">Fabrication d'une boule</h3>
+                                    <h4 class="position-absolute h5 ms-3 mt-1">Fabrication d'une boule</h4>
                                 </div>
-                            </div>  
-                            
+                            </div>
                             <a href="#look-inside" data-bs-toggle="collapse" 
                                 class="position-absolute left-0 bottom-0 ">
-                                <img src="/p3-ico-camera.svg" class="m-3" height="32px">
-                            </a>                          
-                            <img src="/p3-img-triplette.png" class="border border-light rounded w-100">
-                        </div>    
-                            <img src="/p3-img-build-steps.jpg" class="border border-light rounded w-100 d-none d-md-block d-lg-none d-xxl-block"> 
-                            <img src="/p3-img-build-perso.jpg" class="border border-light rounded w-100 d-none d-md-block d-lg-none d-xxl-block"> 
-                        </div>
+                                <img src="/p3-ico-camera.svg" class="m-3" height="32px" alt="symbole camera - accès à la vidéo concernant la fabrication d'une boule de pétanque">
+                            </a> 
+                            <img src="/p3-img-triplette.png" class="border border-light rounded w-100" alt="triplette de pétanque sur le sable">
+                        </div> 
+                        <img src="/p3-img-build-steps.jpg" class="border border-light rounded w-100 d-none d-md-block d-lg-none d-xxl-block" alt="étapes de mise en forme du morceau d'acier jusqu'à la boule en tant que produit fini"> 
+                        <img src="/p3-img-build-perso.jpg" class="border border-light rounded w-100 d-none d-md-block d-lg-none d-xxl-block" alt="machine de gravage pour la personnalisation de son jeu de boules"> 
+                    </div>
+
                 </article>  
             </div>
+
             <div class="col-12 col-xxl-6 border-lg-start">
                 <article class="row justify-content-around p-0">  
-                    <h2 class="title">Choisir</h2>        
+                    <h3 class="title">Choisir</h3>        
                     <div class="col-12 col-md-6
                         d-flex flex-column 
                         align-items-start
@@ -551,16 +532,25 @@
                             <li>augmente la surface de contact</li>
                         </ul>            
                     </div>
-                    <div class="col-12 col-md-6 h-100  mt-3 p-3 position-relative">
+
+                    <div class="col-12 col-md-6 h-100 mt-3 p-0 position-relative">                        
                         
+                        <img src="/p3-img-cindy.jpg" class="mh-100 mw-100 w-auto border border-light rounded" alt="buste de Cindy Peyrot - une de meilleures tireuses en 2022">
+                        
+                        <a  href="#cp-portrait" 
+                            data-bs-toggle="collapse" 
+                            class="signature position-absolute bottom-0 end-0 bg-dark border border-light rounded-3">
+                            Cindy Peyrot
+                        </a>
+
                         <!--fenêtre masquée qui est découverte par click sur signature-->
-                        <div style="position:absolute; bottom:0; z-index:2;">
-                            <div class="collapse " id="cp-portrait">
-                                <div class="bg-dark p-3 border border-light rounded" style="width: 95%;">       
+                        <div class="hidden-explanation p-3">
+                            <div class="collapse" id="cp-portrait">
+                                <div class="bg-dark p-3 border border-light rounded">       
                                     <p class="fw-bold" style="color:var(--main-color);">Cindy Peyrot</p>
                                     <p class="text-primary fw-bold">Tireuse ou milieu</p>
                                     <p>Date de naissance: 30 mars 1994</p>
-                                    <table class="table table-dark fs-6 fw-normal" style="width:100%;">
+                                    <table class="table table-dark fs-6 fw-normal">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Competition</th>
@@ -596,32 +586,23 @@
                                     >Close</button>
                                 </div>
                             </div>
-                        </div>   
-                            <quote class="position-absolute top-0 left-0 text-warning bg-black fw-bold fs-3 p-1" style="line-height:1.5rem; vertical-align:middle; transform:rotate(-35deg) translate(-3.5rem); translateY(0.6rem);">"La patte gauche"</quote>
-                            <img src="/p3-img-cindy.jpg" class="mh-100 mw-100 w-auto border border-light rounded">
-                            <a 
-                                href="#cp-portrait" 
-                                data-bs-toggle="collapse" 
-                                style="z-index:1;" 
-                                class="ff-nautigal fs-3 text-light position-absolute bottom-0 end-0 px-3 text-nowrap bg-dark m-3 rounded border border-light"
-                            >Cindy Peyrot</a>
+                        </div> 
+
                     </div>
                 </article>
-            </div>
+            </div>            
         </section>
     </main>
 
-    <div class="saut-page mb-3"></div>
+<!--*************************************** Pied de page ****************************************-->
 
-    <footer class="bg-black m-0">
-        <a class="row btn menu-btn m-0 p-0 text-black" href="/index.html">Pour en savoir plus ...</a>
-        <img class="d-none card-image" src="/p3-img-footer.png" >  
-        <p>Actualités - compétitions - Portraits joueuses/joueurs - forum </p>
-        <a class="row btn menu-btn m-0 p-0" href="https://www.boulistenaute.com" target="blank">Boulistenaute</a>      
-        <a class="row btn menu-btn m-0 p-0" href="https://www.obut.com/fr/boules-de-petanque.html" target="blank">Matériel</a>        
+    <footer>
+        <div class="footer-title">Poursuivre ses recherches . . .</div>
+        <a class="external-link" href="https://www.boulistenaute.com" target="blank">actualités, forum, portrait des joueurs</a>      
+        <a class="external-link" href="https://www.obut.com/fr/" target="blank">guide technique, catalogue du matériel </a>        
     </footer>
 
-    <!-- Bootstrap script bundle from Content Delivery Network -->
+<!--******************* Bootstrap script bundle from Content Delivery Network *******************-->
     <script 
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
