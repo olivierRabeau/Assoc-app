@@ -1,7 +1,7 @@
-@import "/style-theme.css";
-@import "/style-layers.css";
-@import "/style-common.css";
-@import "/style-nav-breakpoints.css";
+@import "./style-theme.css";
+@import "./style-layers.css";
+@import "./style-common.css";
+@import "./style-nav-breakpoints.css";
 
 
 
